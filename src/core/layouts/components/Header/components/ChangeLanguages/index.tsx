@@ -2,7 +2,7 @@ import { memo } from "react";
 import { useTranslation } from "react-i18next";
 
 const ChangeLanguages: React.FC = memo(() => {
-    const [t, i18n] = useTranslation("global");
+    const { i18n } = useTranslation("global");
 
     const handleChangeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);

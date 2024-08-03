@@ -1,7 +1,7 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useState } from "react";
 
-import "./styles.scss";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import "./styles.scss";
 
 const Banner: React.FC = memo(() => {
     const [isChangeSlide, setIsChangeSlide] = useState(0);
