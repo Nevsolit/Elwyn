@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./styles.scss";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import "./styles.scss";
 
 interface PaginationProps {
     currentPage: number;
@@ -50,9 +50,9 @@ const PaginationCustom: React.FC<PaginationProps> = ({ currentPage, totalPages, 
                 {getPageNumbers().map((number, index) => (
                     <li
                         key={index}
-                        className={`pagination_custom__container__page-item ${
+                        className={` ${
                             currentPage === number
-                                ? "pagination_custom__container__page-item__active "
+                                ? "pagination_custom__container__page-item__active"
                                 : "pagination_custom__container__page-item"
                         }`}
                     >

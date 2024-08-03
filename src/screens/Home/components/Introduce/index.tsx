@@ -5,7 +5,7 @@ import fakeData from "~/core/utils/fakeData";
 import ItemIntroduce from "./components/ItemIntroduce";
 
 const Introduce: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <WrapperSection

@@ -8,7 +8,7 @@ import ListProjects from "./components/ListProjects";
 import { transitionPage } from "~/core/hoc";
 
 const ProjectScreen: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <div className="projects__container">

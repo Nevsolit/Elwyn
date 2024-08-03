@@ -1,17 +1,28 @@
 import { memo } from "react";
-import { PaginationCustom, WrapperLayoutPresent } from "~/core/components";
+import { PaginationCustom, SkeletonItem, WrapperLayoutPresent } from "~/core/components";
 import ItemBlogs from "~/core/components/shared/ItemBlog";
+import { BlogPost } from "~/core/types";
 import fakeData from "~/core/utils/fakeData";
 
-const ListBlogs = memo(() => {
+interface ListBlogsProps {
+    list: BlogPost[];
+    loading: boolean;
+    totalPages: number;
+    currentPage: number;
+    onPageChange: (page: number) => void;
+}
+
+const ListBlogs: React.FC<ListBlogsProps> = memo(({ list, loading, totalPages, currentPage, onPageChange }) => {
     return (
         <div className="group__column__center w-full gap-8">
             <WrapperLayoutPresent type="row">
-                {fakeData(10).map((_, index) => (
-                    <ItemBlogs key={`item-blog-${index}`} />
-                ))}
+                {loading
+                    ? fakeData(9).map((_, index) => <SkeletonItem key={`skeleton-item-blog-${index}`} />)
+                    : list.map((blog) => <ItemBlogs key={blog.id} data={blog} />)}
             </WrapperLayoutPresent>
-            <PaginationCustom currentPage={1} totalPages={20} onPageChange={(page) => console.log(page)} />
+            {!loading && totalPages > 1 && (
+                <PaginationCustom currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange} />
+            )}
         </div>
     );
 });

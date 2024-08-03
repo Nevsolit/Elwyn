@@ -1,18 +1,18 @@
+import "@radix-ui/themes/styles.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 import App from "./App.tsx";
 import "./index.css";
-import "@radix-ui/themes/styles.css";
-import { Provider } from "react-redux";
 
-import { persistor, store } from "~/core/store/store.ts";
-import { PersistGate } from "redux-persist/integration/react";
 import { Theme } from "@radix-ui/themes";
 import i18next from "i18next";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor, store } from "~/core/store/store.ts";
 
+import { I18nextProvider } from "react-i18next";
 import global_en from "~/core/translations/en/global.json";
 import global_vi from "~/core/translations/vi/global.json";
-import { I18nextProvider } from "react-i18next";
 
 i18next.init({
     interpolation: { escapeValue: false },

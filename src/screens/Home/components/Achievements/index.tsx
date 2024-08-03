@@ -3,7 +3,7 @@ import { ItemProject, WrapperLayoutPresent, WrapperSection } from "~/core/compon
 import fakeData from "~/core/utils/fakeData";
 
 const Achievements: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <WrapperSection

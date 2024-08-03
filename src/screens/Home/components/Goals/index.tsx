@@ -4,7 +4,7 @@ import fakeData from "~/core/utils/fakeData";
 import ItemGoals from "./components/ItemGoals";
 
 const Goals: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <WrapperSection

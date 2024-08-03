@@ -1,3 +1,4 @@
+import { memo } from "react";
 import "./styles.scss";
 
 type WrapperSectionProps = {
@@ -19,4 +20,4 @@ const WrapperSection: React.FC<WrapperSectionProps> = ({ children, title, type =
     );
 };
 
-export default WrapperSection;
+export default memo(WrapperSection);

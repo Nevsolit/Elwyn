@@ -6,7 +6,7 @@ import Images from "~/assets/imgs";
 import { useTranslation } from "react-i18next";
 
 const NotFoundScreen: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <div className="not_found__container">

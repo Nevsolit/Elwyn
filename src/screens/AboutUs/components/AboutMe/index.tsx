@@ -3,7 +3,7 @@ import "./styles.scss";
 import { useTranslation } from "react-i18next";
 
 const AboutMe: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <WrapperSection>

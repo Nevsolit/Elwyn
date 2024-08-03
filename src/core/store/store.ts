@@ -3,6 +3,7 @@ import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, pers
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import storage from 'redux-persist/lib/storage';
 import ProjectsReducer from './reducers/projects';
+import BlogsReducer from './reducers/blogs';
 
 
 
@@ -11,12 +12,13 @@ const persistConfig = {
     storage,
     timeout: 30000,
     // whitelist: [],
-    // blacklist: [],
+    blacklist: ['blogs'],
     stateReconciler: autoMergeLevel2,
 };
 
 const rootReducer = combineReducers({
     projects : ProjectsReducer,
+    blogs : BlogsReducer,
 });
 
 type RootState = ReturnType<typeof rootReducer>;

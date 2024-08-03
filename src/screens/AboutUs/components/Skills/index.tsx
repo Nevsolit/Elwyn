@@ -4,7 +4,7 @@ import "./styles.scss";
 import { useTranslation } from "react-i18next";
 
 const Skills: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     const dataFake = [
         "DesginWeb/App",

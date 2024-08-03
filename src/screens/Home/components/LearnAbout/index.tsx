@@ -5,7 +5,7 @@ import fakeData from "~/core/utils/fakeData";
 import ItemLearnAbout from "./components/ItemLearnAbout";
 
 const LearnAbout: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <WrapperSection

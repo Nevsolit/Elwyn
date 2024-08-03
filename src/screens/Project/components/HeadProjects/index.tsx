@@ -5,7 +5,7 @@ import { Filter } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const HeadProjects: React.FC = memo(() => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <div className="head_projects__container">

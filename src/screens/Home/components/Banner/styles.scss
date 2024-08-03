@@ -1,5 +1,5 @@
 .banner__container{
-    @apply h-[312px] relative ;
+    @apply h-[312px] bg-gray-200 relative ;
     @apply md:h-[412px] lg:h-[512px] xl:h-[612px];
 
     &__background {
@@ -12,8 +12,6 @@
 
             button{
                 @apply text-white ;
-
-         
             }
         }
     }

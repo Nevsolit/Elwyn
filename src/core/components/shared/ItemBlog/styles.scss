@@ -2,7 +2,11 @@
     @apply w-full;
 
     &__image{
-        @apply h-[350px] bg-gray-100;
+        @apply h-[350px] bg-gray-100 overflow-hidden;
+
+        img{
+            @apply object-cover h-full w-full;
+        }
     }
 
     &__content{

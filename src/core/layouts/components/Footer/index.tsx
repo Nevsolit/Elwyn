@@ -6,7 +6,7 @@ import "./styles.scss";
 import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
     return (
         <footer className="footer__container">
             <div className="footer__container__wrapper ">

@@ -2,14 +2,17 @@
     @apply flex items-center gap-2;
 
     &__page-item{
-        @apply bg-green-300;
+
+        button,&__active {
+            @apply w-[42px] border border-secondary h-[42px] cursor-pointer  flex justify-center items-center p-2;
+        }
 
         button{
-            @apply bg-white w-[42px] border border-secondary h-[42px] cursor-pointer text-secondary flex justify-center items-center p-2;
+            @apply bg-white  text-secondary;
         }
 
         &__active{
-            @apply bg-red-400;
+            @apply bg-secondary text-white;
         }
 
         &__disabled{

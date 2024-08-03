@@ -4,11 +4,7 @@ import { store } from "../store";
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
 
-const useRedux = () => {
-    const useAppDispatch = () => useDispatch<AppDispatch>();
-    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+const useAppDispatch = () => useDispatch<AppDispatch>();
+const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-    return { useAppDispatch, useAppSelector };
-};
-
-export default useRedux;
+export { useAppDispatch, useAppSelector };

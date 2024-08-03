@@ -2,6 +2,7 @@ import { ChevronLeft, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import "./styles.scss";
+import { memo } from "react";
 
 type BackPageProps = {
     type?: "detail" | "default";
@@ -27,4 +28,4 @@ const BackPage: React.FC<BackPageProps> = ({ type = "default", background = "pri
     );
 };
 
-export default BackPage;
+export default memo(BackPage);

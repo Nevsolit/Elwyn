@@ -1,47 +1,60 @@
-import { memo, useState } from "react";
-
+import { memo, useEffect, useState, useCallback } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import "./styles.scss";
+import { getCollection } from "~/core/services";
+import log from "~/core/utils/log";
+import { BannerEntity } from "~/core/types";
 
 const Banner: React.FC = memo(() => {
-    const [isChangeSlide, setIsChangeSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [banners, setBanners] = useState<BannerEntity[]>([]);
 
-    const dataImages = [
-        "https://i.pinimg.com/originals/e2/6a/78/e26a78d1f0dc39c24790b74a44dedb38.png",
-        "https://i.pinimg.com/736x/bc/81/d4/bc81d4ed49d4a6ad7b7ae75004ded334.jpg",
-        "https://i.pinimg.com/564x/c2/b7/ac/c2b7ac0739503c4d9a6711845608aa5f.jpg",
-    ];
+    const handleNextSlide = useCallback(
+        (type: "prev" | "next") => {
+            setCurrentSlide((prev) => {
+                if (type === "prev") {
+                    return prev === 0 ? banners.length - 1 : prev - 1;
+                } else {
+                    return prev === banners.length - 1 ? 0 : prev + 1;
+                }
+            });
+        },
+        [banners.length],
+    );
 
-    const handleNextSlide = (type: "prev" | "next") => {
-        if (type === "prev") {
-            return setIsChangeSlide((prev) => (prev === 0 ? dataImages.length - 1 : prev - 1));
-        } else {
-            setIsChangeSlide((prev) => (prev === dataImages.length - 1 ? 0 : prev + 1));
+    const fetchBanners = useCallback(async () => {
+        try {
+            const bannersCollection = (await getCollection("banners")) as BannerEntity[];
+            setBanners(bannersCollection);
+        } catch (error) {
+            log("error", "fetchBanners", error);
         }
-    };
+    }, []);
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setIsChangeSlide((prev) => (prev === dataImages.length - 1 ? 0 : prev + 1));
-    //     }, 5000);
+    useEffect(() => {
+        fetchBanners();
+    }, [fetchBanners]);
 
-    //     return () => clearInterval(interval);
-    // }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleNextSlide("next");
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [handleNextSlide]);
+
+    const currentBanner = banners[currentSlide];
 
     return (
         <div className="banner__container">
-            {dataImages.map((item, index) => {
-                if (index === isChangeSlide) {
-                    return (
-                        <img
-                            src={item}
-                            key={`banner-${index}`}
-                            alt=""
-                            className="banner__container__background fade-in"
-                        />
-                    );
-                }
-            })}
+            {currentBanner && (
+                <img
+                    src={currentBanner.imageUrl}
+                    key={`banner-${currentSlide}`}
+                    alt="elwyn"
+                    className="banner__container__background fade-in"
+                />
+            )}
             <div className="banner__container__content absolute-full flex-center">
                 <div className="banner__container__content__btn flex-between">
                     <button onClick={() => handleNextSlide("prev")}>

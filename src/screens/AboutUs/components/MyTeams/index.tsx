@@ -5,7 +5,7 @@ import ItemTeam from "./components/ItemTeam";
 import { useTranslation } from "react-i18next";
 
 const MyTeams: React.FC = () => {
-    const [t] = useTranslation("global");
+    const { t } = useTranslation("global");
 
     return (
         <WrapperSection
