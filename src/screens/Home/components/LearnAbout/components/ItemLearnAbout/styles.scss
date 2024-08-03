@@ -1,0 +1,13 @@
+.item__learn_about__container{
+    @apply w-full;
+
+    &__small_image{
+        @apply bg-gray-100 h-[200px];
+        @apply md:h-[171px] xl:h-[271px];
+    }
+
+    &__image{
+        @apply h-[350px] w-full bg-gray-100;
+        @apply xl:h-[550px]
+    }
+}

@@ -1,0 +1,13 @@
+.wrapper_layout_present__container{
+
+    &--row{
+        @apply w-full gap-4 justify-center items-center grid grid-cols-1;
+        @apply md:grid-cols-3;
+    }
+
+    &--long_short{
+        @apply w-full gap-4 justify-center items-center flex flex-col;
+        @apply md:flex-row;
+    }
+   
+}

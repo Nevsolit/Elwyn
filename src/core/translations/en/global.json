@@ -1,0 +1,75 @@
+{
+    "header":{
+        "home": "Home",
+        "about-us": "About us",
+        "projects": "Projects",
+        "blogs": "Blogs",
+        "arts": "Arts",
+        "shop": "Shop"
+    },
+    "footer": {
+        "get-in-touch": "Get in touch",
+        "description": "Work inquiries, commission requeats, speaking inquiries, funny jokes, and just-saying-hi’s can be sent to:",
+        "Elwyn-Studio-Newsletter": "Elwyn Studio Newsletter",
+        "contact": "Contact us for support or information about our events.",
+        "subscribe": "Subscribe",
+        "subscribing": "By subscribing you agree to ",
+        "terms-of-use": "Substack's Terms of Use",
+        "our": "our",
+        "privacy-policy": "Privacy Policy",
+        "and": "and",
+        "information-collection-notice": "our Information Collection Notice"
+        },
+    "home": {
+        "title-introduce" : {
+            "first" : "Hi,",
+            "second" : " I’m Min! ",
+            "third" : "I’m a web developer, designer, content creator and maker of interesting things."
+        },
+        "title-learn-about" : {
+            "first" : "Know a little about",
+            "second" : "Elwyn!"
+        },
+        "title-achivements" : {
+            "first" : "Some",
+            "second" : "achievements",
+            "third" : "that I have achieved!"
+        },
+        "title-goals": {
+            "first" : "A little bit about",
+            "second" : "passion",
+            "third" : "and",
+            "fourth" : "goals!"
+        }
+    },
+    "about-us": {
+       "about-me":{
+            "title": "Hello, my name is Min - I am a web developer and web designer in Vietnam.",
+            "description-1": "I want to create work with heart, purpose and originality. Some of my favorite projects include creating art, my painting for freedom program, and you may have come across some of my products on the market. I once participated in creating the Japanese comic book Flower That Day! , Memories of a time, ... At the same time, I have also participated in the development of a few Web3 projects such as Sightsea.",
+            "description-2": "Previously, I was a freelance illustrator, but now I have stopped it and become a developer. It doesn't mean I'm giving up on it, but I will keep it because it is my passion."
+       },
+       "skills": {
+            "title": "Selected Clients"
+       },
+       "my-teams": {
+            "title": "My Teams",
+            "description": "A brief introduction to some of our studio members."
+       }
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Introducing our work, members and goals. You will understand how we work and how to communicate with us.",
+        "search": "Search",
+        "placeholder-search": "Search project name"
+    },
+    "blogs": {
+        "title": "Blogs",
+        "description": "Some of the articles share our stories, knowledge, experiences and experiences.",
+        "search": "Search",
+        "placeholder-search": "Search blog name"
+    },
+    "404": {
+        "description": "Oh my wonderful eyes must sometimes get lost. Let me paint a beautiful picture for life to brighten your life's path!",
+        "come-back": "Come back, beautiful eyes"
+    }
+}

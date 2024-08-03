@@ -1,0 +1,75 @@
+{
+    "header": {
+        "home": "Trang chủ",
+        "about-us": "Về chúng tôi",
+        "projects": "Dự án",
+        "blogs": "Blogs",
+        "arts": "Nghệ thuật",
+        "shop": "Cửa hàng"
+    },
+    "footer": {
+        "get-in-touch": "Liên hệ",
+        "description": "Các yêu cầu làm việc, yêu cầu đặt hàng, yêu cầu phát biểu, những câu chuyện hài hước và những lời chào có thể được gửi đến:",
+        "Elwyn-Studio-Newsletter": "Bản tin Elwyn Studio",
+        "contact": "Liên hệ với chúng tôi để được hỗ trợ hoặc thông tin về các sự kiện của chúng tôi.",
+        "subscribe": "Đăng ký",
+        "subscribing": "Bằng cách đăng ký, bạn đồng ý với ",
+        "terms-of-use": "Điều khoản sử dụng của Substack",
+        "our": "của chúng tôi",
+        "privacy-policy": "Chính sách bảo mật",
+        "and": "và",
+        "information-collection-notice": "Thông báo về việc thu thập thông tin của chúng tôi"
+    },
+    "home": {
+        "title-introduce": {
+            "first": "Xin chào,",
+            "second": " Tôi là Min! ",
+            "third": "Tôi là một lập trình viên web, thiết kế, tạo nội dung và là người tạo ra những thứ thú vị."
+        },
+        "title-learn-about": {
+            "first": "Tìm hiểu một chút về",
+            "second": "Elwyn!"
+        },
+        "title-achivements": {
+            "first": "Một số",
+            "second": "thành tựu",
+            "third": "mà tôi đã đạt được!"
+        },
+        "title-goals": {
+            "first": "Một chút về",
+            "second": "đam mê",
+            "third": "và",
+            "fourth": "mục tiêu!"
+        }
+    },
+    "about-us": {
+        "about-me": {
+            "title": "Xin chào, tôi tên là Min - Tôi là một lập trình viên web và thiết kế web tại Việt Nam.",
+            "description-1": "Tôi muốn tạo ra công việc với trái tim, mục đích và tính độc đáo. Một số dự án yêu thích của tôi bao gồm việc tạo nghệ thuật, chương trình vẽ của tôi cho tự do, và bạn có thể đã gặp một số sản phẩm của tôi trên thị trường. Tôi đã từng tham gia vào việc tạo ra truyện tranh Nhật Bản Flower That Day! , Memories of a time, ... Đồng thời, tôi cũng đã tham gia vào việc phát triển một số dự án Web3 như Sightsea.",
+            "description-2": "Trước đây, tôi là một họa sĩ tự do, nhưng bây giờ tôi đã dừng lại và trở thành một lập trình viên. Điều đó không có nghĩa là tôi từ bỏ nó, nhưng tôi sẽ giữ nó vì đó là đam mê của tôi."
+        },
+        "skills": {
+            "title": "Khách hàng đã chọn"
+        },
+        "my-teams": {
+            "title": "Đội của tôi",
+            "description": "Một sự giới thiệu ngắn gọn về một số thành viên của studio của chúng tôi."
+        }   
+    },
+    "projects": {
+        "title": "Dự án",
+        "description": "Dưới đây là một số dự án mà tôi đã tham gia hoặc tạo ra.",
+        "search": "Tìm kiếm",
+        "placeholder-search": "Tìm kiếm tên dự án"
+    },
+    "blogs": {
+        "title": "Blogs",
+        "description": "Những bài viết mới nhất từ blog của tôi.",
+        "search": "Tìm kiếm",
+        "placeholder-search": "Tìm kiếm tên blog"
+    },
+    "404": {
+        "header": "Trang không tồn tại",
+        "description": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại."
+    }
+}

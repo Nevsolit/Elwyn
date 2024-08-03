@@ -1,0 +1,50 @@
+.nav_bar__container{
+    &__btn_menu{
+        @apply lg:hidden;
+    }
+
+    &__drawer{
+        @apply  fixed top-0 left-0 bottom-0 right-0 bg-black-brightness-70;
+
+        .drawer__content{
+            @apply bg-white max-w-[360px] h-full shadow-md;
+
+            &__head{
+                @apply p-4;
+            }
+
+            &__nav{
+                @apply p-4;
+
+                &__link{
+                    @apply py-3 text-sm font-medium border-b border-gray-300 text-cl-gray duration-150;
+                }
+
+                .nav__link__active{
+                    @apply underline;
+                }
+            }
+        }
+    }
+
+    &__navLink{
+        .drawer__content{
+            &__head{
+                @apply lg:hidden;
+            }
+
+            &__nav{
+                @apply gap-6;
+
+                &__link{
+                    @apply text-sm font-medium text-cl-gray duration-150;
+                    @apply hover:underline;
+                }
+
+                .nav__link__active{
+                    @apply underline;
+                }
+            }
+        }
+    }
+}

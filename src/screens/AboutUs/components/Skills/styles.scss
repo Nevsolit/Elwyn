@@ -1,0 +1,33 @@
+.skills__container{
+    @apply w-full flex flex-col gap-4;
+    @apply md:flex-row;
+
+    &__list_skill{
+        @apply flex-1 font-sawarabi;
+
+        h1{
+            @apply  text-tertiary font-semibold text-lg;
+            @apply md:text-xl;
+        }
+
+        .list__item_skill{
+            @apply grid grid-cols-2 gap-2;
+
+            p{
+                @apply text-sm;
+            }
+        }
+    }
+
+    &__preview{
+        @apply flex-1 ;
+
+       &__video{
+            @apply w-full h-[350px] ;
+
+            iframe{
+                @apply w-full h-full object-cover;
+            }
+        }
+    }
+}

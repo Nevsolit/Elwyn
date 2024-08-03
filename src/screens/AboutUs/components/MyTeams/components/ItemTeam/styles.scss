@@ -1,0 +1,19 @@
+.item__team__container{
+    @apply w-full;
+
+    &__image{
+        @apply h-[350px] bg-gray-100;
+    }
+
+    &__content{
+        @apply py-4 items-center;
+
+        h1{
+            @apply font-sawarabi text-xl text-tertiary ;
+        }
+
+        p{
+            @apply text-center text-cl-gray;
+        }
+    }
+}

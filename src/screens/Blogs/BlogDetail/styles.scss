@@ -1,0 +1,24 @@
+.blog_detail__container{
+    @apply bg-primary w-full flex justify-center py-16;
+
+    &__back_page{
+        @apply w-full flex justify-center;
+    }
+
+    &__title{
+        @apply items-start justify-start;
+
+        h1{
+            @apply text-lg font-sawarabi text-tertiary;
+        }
+
+        span{
+            @apply text-sm py-1.5 px-4 rounded-full font-semibold bg-secondary text-white;
+        }
+    }
+
+    &__image{
+        @apply w-full h-[300px] bg-gray-300;
+        @apply lg:h-[400px];
+    }
+}

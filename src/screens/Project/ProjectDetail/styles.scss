@@ -1,0 +1,25 @@
+.project_detail__container{
+    @apply mt-20 w-full flex justify-center font-sawarabi text-sm ;
+
+    &__title{
+        @apply gap-2 max-w-[520px] ;
+
+        p{
+            @apply text-center text-cl-gray;
+        }
+
+        h1{
+            @apply text-xl text-center text-tertiary;
+            @apply md:text-2xl;
+        }
+
+        span{
+            @apply text-center text-cl-gray;
+        }
+    }
+
+    &__image{
+        @apply w-full h-[340px] bg-gray-200;
+        @apply lg:h-[450px]
+    }
+}

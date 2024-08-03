@@ -1,0 +1,30 @@
+.about_me__container{
+    @apply w-full flex flex-col;
+    @apply md:flex-row;
+
+    &__images{
+        @apply flex-1 bg-blue-300 ;
+
+        img{
+            @apply w-full h-full object-cover;
+        }
+    }
+
+    &__info{
+        @apply flex-1 bg-primary p-8 font-sawarabi;
+        @apply md:justify-center;
+
+        h1{
+            @apply text-lg text-tertiary font-semibold;
+            @apply md:text-xl;
+        }
+
+        h2{
+            @apply text-secondary ;
+        }
+
+        p{
+            @apply text-sm;
+        }
+    }
+}

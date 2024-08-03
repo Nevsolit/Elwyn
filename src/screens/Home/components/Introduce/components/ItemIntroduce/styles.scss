@@ -1,0 +1,20 @@
+.item_introduce__container{
+    @apply w-full ;
+
+    &__image {
+        @apply w-full h-[350px] bg-gray-100;
+        @apply sm:h-[500px] md:h-[350px] lg:h-[500px] lg:max-w-[400px];
+    }
+
+    &__content{
+        @apply items-center justify-center p-4;
+
+        h1{
+            @apply font-sawarabi text-xl;
+        }
+
+        p{
+            @apply font-satisfy text-cl-gray text-lg;
+        }
+    }
+}

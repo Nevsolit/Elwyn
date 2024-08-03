@@ -1,0 +1,12 @@
+.wrapper__section__container{
+    @apply px-3 w-full;
+    @apply lg:px-0;
+
+    &__wrapper{
+        @apply m-auto gap-8 items-center container ;
+    }
+
+    .detail__section{
+        @apply max-w-[780px] ;
+    }
+}

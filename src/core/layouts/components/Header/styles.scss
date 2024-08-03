@@ -1,0 +1,8 @@
+.header__container{
+    @apply bg-transparent z-50 fixed shadow-sm w-full;
+
+    &__wrapper{
+        @apply container m-auto p-4;
+        @apply lg:px-0;
+    }
+}

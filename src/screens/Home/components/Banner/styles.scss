@@ -1,0 +1,20 @@
+.banner__container{
+    @apply h-[312px] relative ;
+    @apply md:h-[412px] lg:h-[512px] xl:h-[612px];
+
+    &__background {
+        @apply w-full h-full object-cover duration-200;
+    }
+
+    &__content{
+        &__btn{
+            @apply w-full px-4;
+
+            button{
+                @apply text-white ;
+
+         
+            }
+        }
+    }
+}
