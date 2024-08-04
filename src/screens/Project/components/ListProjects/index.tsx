@@ -1,18 +1,40 @@
 import { memo } from "react";
-import { ItemProject, PaginationCustom, WrapperLayoutPresent } from "~/core/components";
+import { ItemProject, PaginationCustom, SkeletonItem, WrapperLayoutPresent } from "~/core/components";
+import EmptyData from "~/core/components/shared/EmptyData";
+import { ProjectsEntity } from "~/core/types/Entity/Projects";
 import fakeData from "~/core/utils/fakeData";
 
-const ListProjects = memo(() => {
+interface ListBlogsProps {
+    list: ProjectsEntity[];
+    loading: boolean;
+    totalPages: number;
+    currentPage: number;
+    onPageChange: (page: number) => void;
+}
+
+const ListProjects: React.FC<ListBlogsProps> = memo(({ list, loading, totalPages, currentPage, onPageChange }) => {
     return (
         <div className="group__column__center w-full gap-8">
-            <WrapperLayoutPresent type="row">
-                {fakeData(10).map((_, index) => (
-                    <ItemProject key={`item-project-${index}`} />
-                ))}
-            </WrapperLayoutPresent>
-            <PaginationCustom currentPage={1} totalPages={20} onPageChange={(page) => console.log(page)} />
+            {loading ? (
+                <WrapperLayoutPresent type="row">
+                    {fakeData(9).map((_, index) => (
+                        <SkeletonItem key={`skeleton-item-project-${index}`} />
+                    ))}
+                </WrapperLayoutPresent>
+            ) : list.length > 0 ? (
+                <WrapperLayoutPresent type="row">
+                    {list.map((project) => (
+                        <ItemProject key={project.id} data={project} />
+                    ))}
+                </WrapperLayoutPresent>
+            ) : (
+                <EmptyData />
+            )}
+            {!loading && totalPages > 1 && (
+                <PaginationCustom currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange} />
+            )}
         </div>
     );
 });
 
-export default ListProjects;
+export default memo(ListProjects);

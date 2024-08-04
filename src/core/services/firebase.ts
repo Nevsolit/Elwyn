@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, getDocs, query, where, WhereFilterOp, limit } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, query, where, WhereFilterOp, limit, orderBy } from "firebase/firestore";
 import { db } from "../configs/firebase";
 
 // Lấy tất cả documents từ một collection
@@ -58,6 +58,24 @@ export async function getLimitedCollection(collectionName: string, limitCount: n
         return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     } catch (error) {
         console.error(`Error getting limited collection ${collectionName}:`, error);
+        throw error;
+    }
+}
+
+
+// Lấy ra số lượng item mới nhất trong collection
+export async function getLatestItems(collectionName: string, feild: string, limitCount: number) {
+    try {
+        const collectionRef = collection(db, collectionName);
+        const q = query(
+            collectionRef,
+            orderBy(feild, "desc"),
+            limit(limitCount)
+        );
+        const querySnapshot = await getDocs(q);
+        return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    } catch (error) {
+        console.error(`Error getting latest items from ${collectionName}:`, error);
         throw error;
     }
 }

@@ -71,5 +71,9 @@
     "404": {
         "header": "Trang không tồn tại",
         "description": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại."
+    },
+    "contact": {
+        "title": "Liên hệ",
+        "description": "Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào, hãy liên hệ với chúng tôi bằng cách điền vào biểu mẫu dưới đây."
     }
 }

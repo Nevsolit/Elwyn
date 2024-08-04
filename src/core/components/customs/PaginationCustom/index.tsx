@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./styles.scss";
@@ -83,4 +83,4 @@ const PaginationCustom: React.FC<PaginationProps> = ({ currentPage, totalPages, 
     );
 };
 
-export default PaginationCustom;
+export default memo(PaginationCustom);

@@ -1,40 +1,85 @@
-import { BackPage, WrapperSection } from "~/core/components";
+import { BackPage, Loading, WrapperSection } from "~/core/components";
 import { transitionPage } from "~/core/hoc";
 
 import "./styles.scss";
 import { Flex } from "@radix-ui/themes";
-import fakeData from "~/core/utils/fakeData";
+import { useParams } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "~/core/hooks";
+import { ProjectsActions } from "~/core/store";
+import { getDetailCollection } from "~/core/services";
+import { ProjectsEntity } from "~/core/types/Entity/Projects";
+import { useCallback, useEffect, useState } from "react";
+import log from "~/core/utils/log";
+import { formatTime } from "~/core/utils";
 
 const ProjectDetailScreen: React.FC = () => {
+    const { projectId } = useParams<{ projectId: string }>();
+    const [projectDetail, setProjectDetail] = useState<ProjectsEntity | null>(null);
+
+    const dispatch = useAppDispatch();
+    const { loading } = useAppSelector((state) => state.root.projects);
+
+    const handleGetBlogDetail = useCallback(async () => {
+        dispatch(ProjectsActions.update({ loading: true }));
+        try {
+            if (projectId) {
+                const blogDetail = await getDetailCollection("projects", projectId);
+
+                if (blogDetail) {
+                    setProjectDetail(blogDetail as ProjectsEntity);
+                }
+            }
+        } catch (error) {
+            log("error", error);
+        } finally {
+            dispatch(ProjectsActions.update({ loading: false }));
+        }
+    }, [dispatch, projectId]);
+
+    useEffect(() => {
+        handleGetBlogDetail();
+    }, []);
+
     return (
         <div className="project_detail__container">
+            {loading && <Loading />}
             <WrapperSection type="detail">
                 <BackPage type="detail" />
                 <Flex direction={"column"} gap={"8"} align={"center"}>
                     <div className="project_detail__container__title group__column__center">
-                        <p>MURAL</p>
-                        <h1>Then, A Fantastic Sea</h1>
+                        <p>{formatTime(projectDetail?.timeCreated || "")}</p>
+                        <h1>{projectDetail?.title}</h1>
                         <span>
                             This was the mural that started it all. I painted this surreal mural in my studio in 2018,
                             and it's since kicked off a career in murals and installations.
                         </span>
                     </div>
-                    {fakeData(3).map((_, index) => (
-                        <Flex key={`content-project-${index}`} direction={"column"} gap={"8"} align={"center"}>
-                            <div className="project_detail__container__image"></div>
-                            <p className="project_detail__container__text">
-                                here are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                                need to be sure there isn't anything embarrassing hidden in the middle of text. All the
-                                Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
-                                making this the first true generator on the Internet. It uses a dictionary of over 200
-                                Latin words, combined with a handful of model sentence structures, to generate Lorem
-                                Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from
-                                repetition, injected humour, or non-characteristic words etc.
-                            </p>
-                        </Flex>
-                    ))}
+                    {projectDetail?.sections.map((sectionProject, index) => {
+                        let checkImage = sectionProject.images.length === 1;
+                        return (
+                            <Flex key={`content-project-${index}`} direction={"column"} gap={"8"} align={"center"}>
+                                <div className={checkImage ? "wrapper_item_image" : "wrapper_list_item_image"}>
+                                    {sectionProject.images.map((image, index) => (
+                                        <img
+                                            key={`item-section-image-project-${index}`}
+                                            className={!checkImage ? "" : "project_detail__container__image"}
+                                            src={image.url}
+                                            alt="elwyn"
+                                        />
+                                    ))}
+                                </div>
+
+                                {sectionProject.contents.map((content, index) => (
+                                    <p
+                                        key={`item-section-content-project-${index}`}
+                                        className="project_detail__container__text"
+                                    >
+                                        {content}
+                                    </p>
+                                ))}
+                            </Flex>
+                        );
+                    })}
                 </Flex>
             </WrapperSection>
         </div>

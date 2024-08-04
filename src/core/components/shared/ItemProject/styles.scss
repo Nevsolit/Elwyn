@@ -3,13 +3,17 @@
 
     &__image{
         @apply h-[350px] bg-gray-100;
+
+        img {
+            @apply w-full h-full object-cover;
+        }
     }
 
     &__content{
         @apply py-4 items-center;
 
         h1{
-            @apply font-sawarabi text-xl text-tertiary ;
+            @apply font-sawarabi text-xl text-center min-h-[56px] text-tertiary line-clamp-2;
         }
 
         p{

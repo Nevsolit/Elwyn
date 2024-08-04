@@ -71,5 +71,9 @@
     "404": {
         "description": "Oh my wonderful eyes must sometimes get lost. Let me paint a beautiful picture for life to brighten your life's path!",
         "come-back": "Come back, beautiful eyes"
+    },
+    "empty_data":{
+        "title": "No data",
+        "description": "There is no data available"
     }
 }

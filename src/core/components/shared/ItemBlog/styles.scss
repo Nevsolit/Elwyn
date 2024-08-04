@@ -13,7 +13,7 @@
         @apply py-4 items-start;
 
         h1{
-            @apply font-sawarabi text-xl text-tertiary ;
+            @apply font-sawarabi text-xl h-[56px] line-clamp-2 text-tertiary ;
         }
 
         p{

@@ -19,7 +19,6 @@
     }
 
     &__image{
-        @apply w-full h-[340px] bg-gray-200;
-        @apply lg:h-[450px]
+        @apply w-full object-cover bg-gray-300;
     }
 }

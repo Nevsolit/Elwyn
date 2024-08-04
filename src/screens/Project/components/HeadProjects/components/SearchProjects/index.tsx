@@ -1,10 +1,10 @@
-import { memo, useState, useEffect } from "react";
+import { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SearchBarCustom } from "~/core/components";
 import { useAppDispatch, useDebounce } from "~/core/hooks";
-import { BlogsActions } from "~/core/store";
+import { ProjectsActions } from "~/core/store";
 
-const SearchBlogs: React.FC = memo(() => {
+const SearchProjects: React.FC = memo(() => {
     const { t } = useTranslation("global");
     const [value, setValue] = useState("");
     const dispatch = useAppDispatch();
@@ -14,7 +14,7 @@ const SearchBlogs: React.FC = memo(() => {
     useEffect(() => {
         if (debouncedSearchTerm !== undefined) {
             dispatch(
-                BlogsActions.update({
+                ProjectsActions.update({
                     pagination: {
                         currentPage: 1,
                         totalPages: 1,
@@ -29,7 +29,9 @@ const SearchBlogs: React.FC = memo(() => {
         setValue(e.target.value);
     };
 
-    return <SearchBarCustom placeholder={t("blogs.placeholder-search")} onChange={handleInputChange} value={value} />;
+    return (
+        <SearchBarCustom placeholder={t("projects.placeholder-search")} onChange={handleInputChange} value={value} />
+    );
 });
 
-export default SearchBlogs;
+export default SearchProjects;

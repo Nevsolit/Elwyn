@@ -81,11 +81,13 @@ input[type="text"]{
 }
 
 .wrapper_list_item_image{
-  @apply p-4 shadow-md bg-secondary w-full columns-2 space-y-5 gap-5;
+  @apply p-2 shadow-md bg-secondary w-full columns-1 space-y-2 gap-2;
+  @apply md:columns-2 md:space-y-4 md:gap-4 md:p-4;
 }
 
 .wrapper_item_image{
-  @apply p-4 shadow-md bg-secondary;
+  @apply p-2 shadow-md bg-secondary;
+  @apply md:p-4;
 }
 
 
