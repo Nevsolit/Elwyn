@@ -1,23 +1,26 @@
+import { memo } from "react";
 import { WrapperSection } from "~/core/components";
+import { AboutUsEntity } from "~/core/types";
 import "./styles.scss";
-import { useTranslation } from "react-i18next";
 
-const AboutMe: React.FC = () => {
-    const { t } = useTranslation("global");
+type AboutMeProps = {
+    data: AboutUsEntity;
+};
 
+const AboutMe: React.FC<AboutMeProps> = (props) => {
     return (
         <WrapperSection>
             <div className="about_me__container">
                 <div className="about_me__container__images">
-                    <img src="https://i.pinimg.com/564x/a4/c5/be/a4c5be5bf1bb2b85a849c5e492588283.jpg" alt="Min Kiên" />
+                    <img src={props?.data?.image} alt="Min Kiên" />
                 </div>
                 <div className="about_me__container__info group__column">
-                    <h1>{t("about-us.about-me.title")}</h1>
-                    <p>{t("about-us.about-me.description-1")}</p>
-                    <p>{t("about-us.about-me.description-2")}</p>
+                    <h1>{props?.data?.title}</h1>
+                    {props?.data?.sections &&
+                        props?.data?.sections.map((section, index) => <p key={`about-me-key-${index}`}>{section}</p>)}
                     <div>
-                        <h1>Elwyn@gmail.com</h1>
-                        <h2>@ktys4tt</h2>
+                        <h1>{props?.data?.email}</h1>
+                        <h2>{props?.data?.tagId}</h2>
                     </div>
                 </div>
             </div>
@@ -25,4 +28,4 @@ const AboutMe: React.FC = () => {
     );
 };
 
-export default AboutMe;
+export default memo(AboutMe);

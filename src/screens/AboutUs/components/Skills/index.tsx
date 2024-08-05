@@ -2,24 +2,15 @@ import { WrapperSection } from "~/core/components";
 
 import "./styles.scss";
 import { useTranslation } from "react-i18next";
+import { memo } from "react";
 
-const Skills: React.FC = () => {
+type SkillsProps = {
+    data: string[];
+    youtubeLinks: string[];
+};
+
+const Skills: React.FC<SkillsProps> = (props) => {
     const { t } = useTranslation("global");
-
-    const dataFake = [
-        "DesginWeb/App",
-        "Desgin Portfolio",
-        "Desgin Landing Page",
-        "Build Portfolio",
-        "Build blog sites",
-        "Desgin Logo",
-        "DesginWeb/App",
-        "Desgin Portfolio",
-        "Desgin Landing Page",
-        "Build Portfolio",
-        "Build blog sites",
-        "Desgin Logo",
-    ];
 
     return (
         <WrapperSection>
@@ -27,29 +18,24 @@ const Skills: React.FC = () => {
                 <div className="skills__container__list_skill group__column">
                     <h1>{t("about-us.skills.title")}</h1>
                     <div className="list__item_skill ">
-                        {dataFake.map((item, index) => (
-                            <p key={`skill-${index}`}>{item}</p>
-                        ))}
+                        {props?.data && props?.data.map((item, index) => <p key={`skill-${index}`}>{item}</p>)}
                     </div>
                 </div>
                 <div className="skills__container__preview group__column">
-                    <div className="skills__container__preview__video">
-                        <iframe
-                            src="https://www.youtube.com/embed/W_IkBXSyC_4?si=RwVBFkRvF8XZACzZ"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        />
-                    </div>
-                    <div className="skills__container__preview__video">
-                        <iframe
-                            src="https://www.youtube.com/embed/-Ivo3bPa7_w?si=uUi17w9V7GeaJATQ"
-                            title="YouTube video player"
-                        ></iframe>
-                    </div>
+                    {props?.youtubeLinks &&
+                        props?.youtubeLinks.map((link, index) => (
+                            <div className="skills__container__preview__video" key={`video-${index}`}>
+                                <iframe
+                                    src={link}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                />
+                            </div>
+                        ))}
                 </div>
             </div>
         </WrapperSection>
     );
 };
 
-export default Skills;
+export default memo(Skills);

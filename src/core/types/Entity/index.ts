@@ -1,2 +1,5 @@
 export * from './Blogs'
 export * from './Banner'
+export * from './AboutUs'
+export * from './Projects'
+export * from './Teams'

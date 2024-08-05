@@ -3,7 +3,7 @@
     @apply md:flex-row;
 
     &__images{
-        @apply flex-1 bg-blue-300 ;
+        @apply flex-1 ;
 
         img{
             @apply w-full h-full object-cover;

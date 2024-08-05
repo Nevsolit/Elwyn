@@ -1,9 +1,9 @@
-import { memo, useEffect, useState, useCallback } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import "./styles.scss";
+import { memo, useCallback, useEffect, useState } from "react";
 import { getCollection } from "~/core/services";
-import log from "~/core/utils/log";
 import { BannerEntity } from "~/core/types";
+import log from "~/core/utils/log";
+import "./styles.scss";
 
 const Banner: React.FC = memo(() => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -35,13 +35,13 @@ const Banner: React.FC = memo(() => {
         fetchBanners();
     }, [fetchBanners]);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            handleNextSlide("next");
-        }, 5000);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         handleNextSlide("next");
+    //     }, 5000);
 
-        return () => clearInterval(interval);
-    }, [handleNextSlide]);
+    //     return () => clearInterval(interval);
+    // }, [handleNextSlide]);
 
     const currentBanner = banners[currentSlide];
 

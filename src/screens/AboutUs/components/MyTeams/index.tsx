@@ -1,10 +1,15 @@
 import { WrapperLayoutPresent, WrapperSection } from "~/core/components";
-import fakeData from "~/core/utils/fakeData";
 
 import ItemTeam from "./components/ItemTeam";
 import { useTranslation } from "react-i18next";
+import { memo } from "react";
+import { TeamsEntity } from "~/core/types";
 
-const MyTeams: React.FC = () => {
+type MyTeamsProps = {
+    data: TeamsEntity[];
+};
+
+const MyTeams: React.FC<MyTeamsProps> = (props) => {
     const { t } = useTranslation("global");
 
     return (
@@ -17,12 +22,11 @@ const MyTeams: React.FC = () => {
             }
         >
             <WrapperLayoutPresent type="row">
-                {fakeData(3).map((_, index) => (
-                    <ItemTeam key={`fake-teams-${index}`} />
-                ))}
+                {props?.data &&
+                    props?.data.map((member, index) => <ItemTeam data={member} key={`fake-teams-${index}`} />)}
             </WrapperLayoutPresent>
         </WrapperSection>
     );
 };
 
-export default MyTeams;
+export default memo(MyTeams);
