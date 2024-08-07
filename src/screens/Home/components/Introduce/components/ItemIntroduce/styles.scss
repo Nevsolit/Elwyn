@@ -4,6 +4,10 @@
     &__image {
         @apply w-full h-[350px] bg-gray-100;
         @apply sm:h-[500px] md:h-[350px] lg:h-[500px] lg:max-w-[400px];
+    
+        img{
+            @apply w-full h-full object-cover;
+        }
     }
 
     &__content{

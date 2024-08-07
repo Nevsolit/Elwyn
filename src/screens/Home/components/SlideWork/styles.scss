@@ -1,4 +1,8 @@
 .slide__work__container{
     @apply bg-gray-100 w-full h-[250px];
-    @apply md:h-[300px] lg:h-[350px]
+    @apply md:h-[300px] lg:h-[350px];
+
+    img{
+        @apply w-full h-full object-cover;
+    }
 }

@@ -79,3 +79,20 @@ export async function getLatestItems(collectionName: string, feild: string, limi
         throw error;
     }
 }
+
+export async function getItemsByTags(collectionName: string, tag: string, limitCount: number) {
+    try {
+        const collectionRef = collection(db, collectionName);
+        const q = query(
+            collectionRef,
+            where("tags", "==", tag),  
+            // orderBy("timeCreated", "desc"),
+            limit(limitCount)
+        );
+        const querySnapshot = await getDocs(q);
+        return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    } catch (error) {
+        console.error(`Error getting items by tags from ${collectionName}:`, error);
+        throw error;
+    }
+}

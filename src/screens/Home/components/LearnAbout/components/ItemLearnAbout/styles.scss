@@ -4,10 +4,18 @@
     &__small_image{
         @apply bg-gray-100 h-[200px];
         @apply md:h-[171px] xl:h-[271px];
+
+        img{
+            @apply h-full w-full object-cover;
+        }
     }
 
     &__image{
         @apply h-[350px] w-full bg-gray-100;
-        @apply xl:h-[550px]
+        @apply xl:h-[550px];
+
+        img{
+            @apply h-full w-full object-cover;
+        }
     }
 }

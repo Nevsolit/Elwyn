@@ -1,11 +1,48 @@
-import { WrapperLayoutPresent, WrapperSection } from "~/core/components";
-import "./styles.scss";
 import { useTranslation } from "react-i18next";
-import fakeData from "~/core/utils/fakeData";
+import { WrapperLayoutPresent, WrapperSection } from "~/core/components";
+import { useGetBlogsByTags } from "~/core/hooks";
 import ItemLearnAbout from "./components/ItemLearnAbout";
+import "./styles.scss";
+import { useMemo } from "react";
 
 const LearnAbout: React.FC = () => {
     const { t } = useTranslation("global");
+
+    const { blogs } = useGetBlogsByTags("learn-about", 4);
+
+    const renderContent = useMemo(() => {
+        if (blogs.length < 3) {
+            return (
+                <WrapperLayoutPresent type="row">
+                    {blogs.length > 0 && <ItemLearnAbout />}
+
+                    {blogs.length > 2 && (
+                        <div className="learn__about__group_item">
+                            <ItemLearnAbout type="small" />
+                            <ItemLearnAbout type="small" />
+                        </div>
+                    )}
+
+                    {blogs.length > 3 && <ItemLearnAbout />}
+                </WrapperLayoutPresent>
+            );
+        }
+
+        return (
+            <WrapperLayoutPresent type="row">
+                {blogs.length > 0 && <ItemLearnAbout data={blogs[0]} />}
+
+                {blogs.length > 2 && (
+                    <div className="learn__about__group_item">
+                        <ItemLearnAbout type="small" data={blogs[1]} />
+                        <ItemLearnAbout type="small" data={blogs[2]} />
+                    </div>
+                )}
+
+                {blogs.length > 3 && <ItemLearnAbout data={blogs[3]} />}
+            </WrapperLayoutPresent>
+        );
+    }, [blogs]);
 
     return (
         <WrapperSection
@@ -15,22 +52,7 @@ const LearnAbout: React.FC = () => {
                 </h1>
             }
         >
-            <WrapperLayoutPresent type="row">
-                {fakeData(4).map((_, index) => {
-                    if (index === 1) {
-                        return (
-                            <div key={`fake-learn-about-${index}`} className={`learn__about__group_item `}>
-                                <ItemLearnAbout key={`fake-learn-about-${index}`} type="small" />
-                                <ItemLearnAbout key={`fake-learn-about-${index + 1}`} type="small" />
-                            </div>
-                        );
-                    }
-                    if (index === 2) {
-                        return null; // Skip rendering item at index 2 as it is included in the previous div
-                    }
-                    return <ItemLearnAbout key={`fake-learn-about-${index}`} />;
-                })}
-            </WrapperLayoutPresent>
+            {renderContent}
         </WrapperSection>
     );
 };

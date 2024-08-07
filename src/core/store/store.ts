@@ -5,6 +5,7 @@ import storage from 'redux-persist/lib/storage';
 import ProjectsReducer from './reducers/projects';
 import BlogsReducer from './reducers/blogs';
 import AboutUsReducer from './reducers/aboutUs';
+import GlobalReducer from './reducers/global';
 
 
 
@@ -20,7 +21,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
     projects : ProjectsReducer,
     blogs : BlogsReducer,
-    aboutUs: AboutUsReducer
+    aboutUs: AboutUsReducer,
+    global: GlobalReducer,
 });
 
 type RootState = ReturnType<typeof rootReducer>;
