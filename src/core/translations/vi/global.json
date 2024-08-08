@@ -54,7 +54,7 @@
         "my-teams": {
             "title": "Đội của tôi",
             "description": "Một sự giới thiệu ngắn gọn về một số thành viên của studio của chúng tôi."
-        }   
+        }
     },
     "projects": {
         "title": "Dự án",
@@ -75,5 +75,60 @@
     "contact": {
         "title": "Liên hệ",
         "description": "Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào, hãy liên hệ với chúng tôi bằng cách điền vào biểu mẫu dưới đây."
+    },
+    "empty": {
+        "title": "Không có dữ liệu",
+        "description": "Không có dữ liệu để hiển thị."
+    },
+    "terms-of-use": {
+        "title": "Điều Khoản Sử Dụng",
+        "introduction": "1. Giới Thiệu",
+        "des-introduction": "Chào mừng bạn đến với Elwyn Studio. Bằng cách truy cập hoặc sử dụng trang web của chúng tôi, bạn đồng ý tuân thủ và bị ràng buộc bởi các điều khoản và điều kiện sau đây. Nếu bạn không đồng ý với những điều khoản này, xin đừng sử dụng trang web của chúng tôi.",
+        "services": "2. Dịch Vụ",
+        "des-services": "Elwyn Studio cung cấp các dịch vụ thiết kế và phát triển, bao gồm nhưng không giới hạn ở thiết kế portfolio và trang đích. Các chi tiết về các dịch vụ được cung cấp sẽ được nêu rõ trong hợp đồng dịch vụ.",
+        "user-responsibilities": "3. Trách Nhiệm Của Người Dùng",
+        "des-user-responsibilities": "Bạn đồng ý sử dụng trang web và dịch vụ của chúng tôi theo đúng các luật và quy định áp dụng. Bạn có trách nhiệm duy trì sự bảo mật của thông tin tài khoản của bạn và tất cả các hoạt động xảy ra dưới tài khoản của bạn.",
+        "intellectual-property": "4. Quyền Sở Hữu Trí Tuệ",
+        "des-intellectual-property": "Tất cả nội dung trên trang web của chúng tôi, bao gồm văn bản, đồ họa, logo và phần mềm, là tài sản của Elwyn Studio và được bảo vệ bởi luật bản quyền và nhãn hiệu.",
+        "limitation-of-liability": "5. Giới Hạn Trách Nhiệm",
+        "des-limitation-of-liability": "Elwyn Studio sẽ không chịu trách nhiệm đối với bất kỳ thiệt hại trực tiếp, gián tiếp, ngẫu nhiên hoặc hậu quả nào phát sinh từ việc bạn sử dụng trang web hoặc dịch vụ của chúng tôi.",
+        "changes-to-terms": "6. Thay Đổi Điều Khoản",
+        "des-changes-to-terms": "Chúng tôi có thể cập nhật các Điều Khoản Sử Dụng này từ thời gian này đến thời gian khác. Việc bạn tiếp tục sử dụng trang web đồng nghĩa với việc chấp nhận bất kỳ thay đổi nào.",
+        "governing-law": "7. Luật Áp Dụng",
+        "des-governing-law": "Các Điều Khoản Sử Dụng này được điều chỉnh bởi luật của [Quốc Gia/Tỉnh]. Mọi tranh chấp phát sinh dưới các điều khoản này sẽ thuộc thẩm quyền của các tòa án tại Việt Nam."
+    },
+    "privacy-policy": {
+        "title": "Chính Sách Quyền Riêng Tư",
+        "introduction": "1. Giới Thiệu",
+        "des-introduction": "Elwyn Studio cam kết bảo vệ quyền riêng tư của bạn. Chính Sách Quyền Riêng Tư này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn.",
+        "information-we-collect": "2. Thông Tin Chúng Tôi Thu Thập",
+        "des-information-we-collect": "Chúng tôi có thể thu thập thông tin cá nhân như tên, địa chỉ email và chi tiết liên hệ của bạn khi bạn sử dụng trang web hoặc dịch vụ của chúng tôi. Chúng tôi cũng thu thập thông tin không cá nhân như địa chỉ IP và loại trình duyệt.",
+        "use-of-information": "3. Sử Dụng Thông Tin",
+        "des-use-of-information": "Chúng tôi sử dụng thông tin thu thập được để cung cấp và cải thiện dịch vụ của chúng tôi, liên lạc với bạn và xử lý giao dịch. Chúng tôi cũng có thể sử dụng thông tin của bạn cho mục đích tiếp thị với sự đồng ý của bạn.",
+        "data-sharing": "4. Chia Sẻ Dữ Liệu",
+        "des-data-sharing": "Chúng tôi không bán hoặc cho thuê thông tin cá nhân của bạn cho bên thứ ba. Chúng tôi có thể chia sẻ thông tin với các nhà cung cấp dịch vụ giúp chúng tôi vận hành trang web và dịch vụ của chúng tôi.",
+        "data-security": "5. Bảo Mật Dữ Liệu",
+        "des-data-security": "Chúng tôi thực hiện các biện pháp bảo mật hợp lý để bảo vệ thông tin của bạn khỏi việc truy cập hoặc tiết lộ trái phép. Tuy nhiên, không có dữ liệu truyền qua Internet hoàn toàn an toàn.",
+        "your-rights": "6. Quyền Của Bạn",
+        "des-your-rights": "Bạn có quyền truy cập, chỉnh sửa hoặc xóa thông tin cá nhân của bạn. Bạn cũng có thể phản đối việc xử lý dữ liệu của bạn trong một số trường hợp.",
+        "changes-to-policy": "7. Thay Đổi Chính Sách",
+        "des-changes-to-policy": "Chúng tôi có thể cập nhật Chính Sách Quyền Riêng Tư này từ thời gian này đến thời gian khác. Bất kỳ thay đổi nào sẽ được đăng trên trang này.",
+        "contact-us": "8. Liên Hệ Với Chúng Tôi",
+        "des-contact-us": "Đối với bất kỳ câu hỏi nào liên quan đến Chính Sách Quyền Riêng Tư này, vui lòng liên hệ với chúng tôi qua email: elwynstudio24@gmail.com."
+    },
+    "information-collection-notice": {
+        "title": "Thông Báo Thu Thập Thông Tin",
+        "introduction": "1. Giới Thiệu",
+        "des-introduction": "Thông báo này giải thích cách Elwyn Studio thu thập và sử dụng thông tin từ người dùng trang web của chúng tôi.",
+        "information-collected": "2. Thông Tin Được Thu Thập",
+        "des-information-collected": "Chúng tôi thu thập thông tin cá nhân mà bạn cung cấp trực tiếp cho chúng tôi, chẳng hạn như tên và địa chỉ email của bạn. Chúng tôi cũng thu thập thông tin tự động qua cookies và các công nghệ tương tự.",
+        "purpose-of-collection": "3. Mục Đích Thu Thập",
+        "des-purpose-of-collection": "Thông tin thu thập được được sử dụng để cung cấp và cải thiện dịch vụ của chúng tôi, liên lạc với bạn và đảm bảo an ninh cho trang web của chúng tôi.",
+        "data-retention": "4. Lưu Giữ Dữ Liệu",
+        "des-data-retention": "Chúng tôi lưu giữ thông tin cá nhân của bạn trong thời gian cần thiết để hoàn thành các mục đích mà nó được thu thập hoặc theo yêu cầu của pháp luật.",
+        "your-choices": "5. Quyền Của Bạn",
+        "des-your-choices": "Bạn có thể kiểm soát cookies và các công nghệ theo dõi thông qua cài đặt trình duyệt của bạn. Bạn cũng có thể liên hệ với chúng tôi để cập nhật hoặc xóa thông tin cá nhân của bạn.",
+        "contact-information": "6. Thông Tin Liên Hệ",
+        "des-contact-information": "Nếu bạn có bất kỳ câu hỏi hoặc lo ngại nào về các thực tiễn thu thập thông tin của chúng tôi, vui lòng liên hệ với chúng tôi qua email: elwynstudio24@gmail.com."
     }
 }

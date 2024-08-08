@@ -90,6 +90,22 @@ input[type="text"]{
   @apply md:p-4;
 }
 
+.title__v2 {
+  @apply text-lg text-tertiary font-sawarabi;
+}
+
+.box__content__v2{
+  @apply flex flex-col gap-2;
+  
+  h2{
+    @apply  text-tertiary font-sawarabi;
+  }
+
+  p{
+    @apply text-cl-gray;
+  }
+}
+
 
 // animations to left
 

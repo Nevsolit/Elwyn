@@ -4,6 +4,8 @@ import Images from "~/assets/imgs";
 
 import "./styles.scss";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import PATHS from "~/core/constants/path";
 
 const Footer: React.FC = () => {
     const { t } = useTranslation("global");
@@ -37,9 +39,12 @@ const Footer: React.FC = () => {
                             <button className="btn__default">{t("footer.subscribe")}</button>
                         </div>
                         <p className="wrapper__form__subscribing">
-                            {t("footer.subscribing")} <a href="">{t("footer.terms-of-use")}</a>, {t("footer.our")}{" "}
-                            <a href="">{t("footer.privacy-policy")}</a> {t("footer.and")}{" "}
-                            <a href="">{t("footer.information-collection-notice")}</a>
+                            {t("footer.subscribing")} <Link to={PATHS.TERMS_OF_USE}>{t("footer.terms-of-use")}</Link>,{" "}
+                            {t("footer.our")} <Link to={PATHS.PRIVACY_POLICY}>{t("footer.privacy-policy")}</Link>{" "}
+                            {t("footer.and")}{" "}
+                            <Link to={PATHS.INFORMATION_COLLECTION_NOTICE}>
+                                {t("footer.information-collection-notice")}
+                            </Link>
                         </p>
                     </form>
                 </div>
