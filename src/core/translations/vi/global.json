@@ -130,5 +130,8 @@
         "des-your-choices": "Bạn có thể kiểm soát cookies và các công nghệ theo dõi thông qua cài đặt trình duyệt của bạn. Bạn cũng có thể liên hệ với chúng tôi để cập nhật hoặc xóa thông tin cá nhân của bạn.",
         "contact-information": "6. Thông Tin Liên Hệ",
         "des-contact-information": "Nếu bạn có bất kỳ câu hỏi hoặc lo ngại nào về các thực tiễn thu thập thông tin của chúng tôi, vui lòng liên hệ với chúng tôi qua email: elwynstudio24@gmail.com."
+    },
+    "notificaions":{
+        "success-subscribe": "Bạn đã đăng ký nhận bản tin của chúng tôi thành công!"
     }
 }

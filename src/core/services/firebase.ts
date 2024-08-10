@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, getDocs, query, where, WhereFilterOp, limit, orderBy } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, query, where, WhereFilterOp, limit, orderBy, addDoc } from "firebase/firestore";
 import { db } from "../configs/firebase";
 
 // Lấy tất cả documents từ một collection
@@ -93,6 +93,18 @@ export async function getItemsByTags(collectionName: string, tag: string, limitC
         return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     } catch (error) {
         console.error(`Error getting items by tags from ${collectionName}:`, error);
+        throw error;
+    }
+}
+
+export async function addDocument(collectionName: string, data: any) {
+    try {
+        const collectionRef = collection(db, collectionName);
+        const docRef = await addDoc(collectionRef, data);
+        console.log(`Document written with ID: ${docRef.id}`);
+        return docRef.id;
+    } catch (error) {
+        console.error(`Error adding document to ${collectionName}:`, error);
         throw error;
     }
 }

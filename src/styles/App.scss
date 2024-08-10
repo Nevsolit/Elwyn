@@ -137,6 +137,22 @@ input[type="text"]{
   }
 }
 
+
+.slide-out-top {
+  animation: fadeOut 1.5s forwards;
+}
+
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
 // animations fade
 
 .fade-in {
@@ -151,4 +167,3 @@ input[type="text"]{
     opacity: 1;
   }
 }
-

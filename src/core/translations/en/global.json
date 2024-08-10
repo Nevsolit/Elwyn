@@ -130,5 +130,8 @@
         "des-your-choices": "You can control cookies and tracking technologies through your browser settings. You may also contact us to update or delete your personal information.",
         "contact-information": "6. Contact Information",
         "des-contact-information": "If you have any questions or concerns about our information collection practices, please contact us at elwynstudio24@gmail.com."
+    },
+    "notificaions": {
+        "success-subscribe": "You have successfully subscribed to our newsletter!"
     }
 }
