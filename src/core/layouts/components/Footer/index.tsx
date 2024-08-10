@@ -15,23 +15,29 @@ const Footer: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [notification, setNotification] = useState<{ message: string; type: "success" | "error" } | null>(null);
 
-    const handleSubscribe = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        if (!email) return;
+    const handleSubscribe = useCallback(
+        async (e: React.FormEvent<HTMLFormElement>) => {
+            e.preventDefault();
+            if (!email) return;
 
-        setLoading(true);
-        try {
-            await addDocument("subscribers", { email });
-            setNotification({ message: `${t("notificaions.success-subscribe")}`, type: "success" });
+            setLoading(true);
+            try {
+                await addDocument("subscribers", {
+                    email,
+                    createdAt: new Date().toISOString(),
+                });
+                setNotification({ message: `${t("notificaions.success-subscribe")}`, type: "success" });
 
-            // Reset form
-            setEmail("");
-        } catch (error) {
-            log(error);
-        } finally {
-            setLoading(false);
-        }
-    }, []);
+                // Reset form
+                setEmail("");
+            } catch (error) {
+                log(error);
+            } finally {
+                setLoading(false);
+            }
+        },
+        [email],
+    );
 
     return (
         <footer className="footer__container">
