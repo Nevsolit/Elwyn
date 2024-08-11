@@ -14,8 +14,8 @@ const HomeScreen: React.FC = () => {
         <Flex direction="column" gap="8">
             <Banner />
             <Introduce />
-            <LearnAbout />
             <Achievements />
+            <LearnAbout />
             <SlideWork />
             <Goals />
         </Flex>
