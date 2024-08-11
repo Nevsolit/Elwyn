@@ -7,12 +7,18 @@
     }
 
     &__content{
+
         &__btn{
             @apply w-full px-4;
 
             button{
                 @apply text-white ;
             }
+        }
+
+        &__link{
+            @apply text-white font-semibold absolute bottom-4 left-1/2 -translate-x-1/2 py-1 px-12 cursor-pointer duration-150 border-white border-2;
+            @apply hover:bg-white hover:text-gray-900;
         }
     }
 }

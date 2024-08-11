@@ -4,6 +4,7 @@ import { getCollection } from "~/core/services";
 import { BannerEntity } from "~/core/types";
 import log from "~/core/utils/log";
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 const Banner: React.FC = memo(() => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -64,6 +65,11 @@ const Banner: React.FC = memo(() => {
                         <ChevronRightIcon size={42} />
                     </button>
                 </div>
+                {currentBanner?.link && (
+                    <Link target="_blank" to={currentBanner?.link} className="banner__container__content__link">
+                        Let's go
+                    </Link>
+                )}
             </div>
         </div>
     );

@@ -13,6 +13,7 @@ import { persistor, store } from "~/core/store/store.ts";
 import { I18nextProvider } from "react-i18next";
 import global_en from "~/core/translations/en/global.json";
 import global_vi from "~/core/translations/vi/global.json";
+import { Loading } from "./core/components/index.ts";
 
 i18next.init({
     interpolation: { escapeValue: false },
@@ -31,7 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <React.Fragment>
             <Provider store={store}>
-                <PersistGate loading={"...loading"} persistor={persistor}>
+                <PersistGate loading={<Loading />} persistor={persistor}>
                     <React.Suspense fallback={<>loading...</>}>
                         <Theme>
                             <I18nextProvider i18n={i18next}>
