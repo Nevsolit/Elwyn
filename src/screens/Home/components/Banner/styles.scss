@@ -17,8 +17,8 @@
         }
 
         &__link{
-            @apply text-white font-semibold absolute bottom-4 left-1/2 -translate-x-1/2 py-1 px-12 cursor-pointer duration-150 border-white border-2;
-            @apply hover:bg-white hover:text-gray-900;
+            @apply text-gray-900 bg-white font-semibold absolute bottom-12 left-1/2 -translate-x-1/2 py-2 px-12 cursor-pointer duration-150 border-white border-2;
+            @apply hover:scale-105;
         }
     }
 }
