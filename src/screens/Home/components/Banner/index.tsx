@@ -34,7 +34,7 @@ const Banner: React.FC = memo(() => {
 
     useEffect(() => {
         fetchBanners();
-    }, [fetchBanners]);
+    }, []);
 
     // useEffect(() => {
     //     const interval = setInterval(() => {
@@ -48,14 +48,27 @@ const Banner: React.FC = memo(() => {
 
     return (
         <div className="banner__container">
-            {currentBanner && (
+            <div className="banner__container__background">
+                {banners.map((banner, index) => (
+                    <img
+                        src={banner.imageUrl}
+                        key={`banner-${index}`}
+                        alt="elwyn"
+                        className={`banner__container__background__img ${
+                            index === currentSlide ? "block fade-in" : "hidden"
+                        }`}
+                    />
+                ))}
+            </div>
+
+            {/* {currentBanner && (
                 <img
                     src={currentBanner.imageUrl}
                     key={`banner-${currentSlide}`}
                     alt="elwyn"
                     className="banner__container__background fade-in"
                 />
-            )}
+            )} */}
             <div className="banner__container__content absolute-full flex-center">
                 <div className="banner__container__content__btn flex-between">
                     <button onClick={() => handleNextSlide("prev")}>
@@ -66,7 +79,7 @@ const Banner: React.FC = memo(() => {
                     </button>
                 </div>
                 {currentBanner?.link && (
-                    <Link target="_blank" to={currentBanner?.link} className="banner__container__content__link">
+                    <Link target="_blank" to={currentBanner?.link} className="banner__container__content__link ">
                         Let's go
                     </Link>
                 )}

@@ -16,7 +16,7 @@ const MainLayout: React.FC = () => {
     // }, []);
 
     return (
-        <Flex direction={"column"} gap={"8"}>
+        <Flex direction={"column"} gap={"6"}>
             <Header />
             <Outlet />
             <Footer />

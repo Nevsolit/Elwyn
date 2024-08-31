@@ -23,7 +23,7 @@
         @apply flex-1 ;
 
        &__video{
-            @apply w-full h-[350px] ;
+            @apply w-full h-[350px] rounded-xl overflow-hidden;
 
             iframe{
                 @apply w-full h-full object-cover;

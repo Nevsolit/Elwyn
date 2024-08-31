@@ -27,7 +27,8 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <header className={`header__container ${activeScroll && "bg-white shadow-sm fade-in"}`}>
+        // bg-white shadow-sm fade-in
+        <header className={`header__container ${activeScroll && ""}`}>
             <div className="header__container__wrapper flex-between">
                 <Logo url={header?.logoUrl} />
                 <NavBar header={header as HeaderSettings} />

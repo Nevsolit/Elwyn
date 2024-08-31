@@ -2,10 +2,11 @@
     @apply w-full;
 
     &__image{
-        @apply h-[350px] bg-gray-100 overflow-hidden;
+        @apply h-[350px] bg-gray-100 rounded-xl overflow-hidden;
 
         img{
-            @apply object-cover h-full w-full;
+            @apply object-cover h-full w-full duration-300 ;
+            @apply  hover:brightness-75;
         }
     }
 

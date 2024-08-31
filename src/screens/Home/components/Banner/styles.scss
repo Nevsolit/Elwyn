@@ -1,15 +1,20 @@
 .banner__container{
-    @apply h-[312px] bg-gray-200  relative ;
-    @apply md:h-[412px] lg:h-[512px] xl:h-[612px];
+    @apply h-[312px]  relative mx-4;
+    @apply md:h-[412px] lg:px-8 lg:h-[512px] xl:h-[712px] md:mx-0;
 
     &__background {
-        @apply w-full h-full object-cover duration-200;
+        @apply w-full rounded-xl relative overflow-hidden h-full bg-white object-cover duration-200;
+    
+        &_img{
+            @apply absolute top-0 left-0 rounded-xl w-full h-full object-cover;
+        }
     }
 
     &__content{
 
         &__btn{
             @apply w-full px-4;
+            @apply lg:px-12;
 
             button{
                 @apply text-white ;
@@ -17,8 +22,8 @@
         }
 
         &__link{
-            @apply text-gray-900 bg-white font-semibold absolute bottom-12 left-1/2 -translate-x-1/2 py-2 px-12 cursor-pointer duration-150 border-white border-2;
-            @apply hover:scale-105;
+            @apply text-gray-900 rounded-md bg-white font-semibold absolute bottom-12 left-1/2 -translate-x-1/2 py-3 px-12 cursor-pointer duration-150 ;
+            @apply hover:bg-black hover:text-white;
         }
     }
 }

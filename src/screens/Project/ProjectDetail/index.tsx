@@ -49,20 +49,18 @@ const ProjectDetailScreen: React.FC = () => {
                     <div className="project_detail__container__title group__column__center">
                         <p>{formatTime(projectDetail?.timeCreated || "")}</p>
                         <h1>{projectDetail?.title}</h1>
-                        <span>
-                            This was the mural that started it all. I painted this surreal mural in my studio in 2018,
-                            and it's since kicked off a career in murals and installations.
-                        </span>
+                        <span>{projectDetail?.description}</span>
                     </div>
                     {projectDetail?.sections.map((sectionProject, index) => {
                         let checkImage = sectionProject.images.length === 1;
                         return (
-                            <Flex key={`content-project-${index}`} direction={"column"} gap={"8"} align={"center"}>
-                                <div className={checkImage ? "wrapper_item_image" : "wrapper_list_item_image"}>
+                            // <Flex key={`content-project-${index}`} direction={"column"} gap={"8"} align={"center"}>
+                            <div className="w-full flex flex-col gap-6">
+                                <div className={` ${checkImage ? "wrapper_item_image" : "wrapper_list_item_image"}`}>
                                     {sectionProject.images.map((image, index) => (
                                         <img
                                             key={`item-section-image-project-${index}`}
-                                            className={!checkImage ? "" : "project_detail__container__image"}
+                                            className={!checkImage ? "rounded-xl" : "project_detail__container__image"}
                                             src={image.url}
                                             alt="elwyn"
                                         />
@@ -77,7 +75,8 @@ const ProjectDetailScreen: React.FC = () => {
                                         {content}
                                     </p>
                                 ))}
-                            </Flex>
+                            </div>
+                            // </Flex>
                         );
                     })}
                 </Flex>

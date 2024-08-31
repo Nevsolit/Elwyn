@@ -2,7 +2,7 @@
     @apply w-full;
 
     &__image{
-        @apply h-[350px] bg-gray-100 flex items-start justify-start;
+        @apply h-[350px] bg-gray-100 overflow-hidden rounded-xl flex items-start justify-start;
 
         img{
             @apply object-cover h-full w-full;

@@ -7,7 +7,7 @@ type ButtonFilterProps = {
 
 const ButtonFilter: React.FC<ButtonFilterProps> = (props) => {
     return (
-        <button className="btn__default gap-2 flex-center" title={props.title} onClick={props.onClick}>
+        <button className="btn__default gap-2 rounded-lg flex-center" title={props.title} onClick={props.onClick}>
             <Filter size={24} />
             <span>{props.text}</span>
         </button>

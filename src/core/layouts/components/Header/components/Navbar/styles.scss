@@ -21,7 +21,7 @@
                 }
 
                 .nav__link__active{
-                    @apply underline;
+                    @apply underline ;
                 }
             }
         }
@@ -37,12 +37,13 @@
                 @apply gap-6;
 
                 &__link{
-                    @apply text-sm font-medium duration-150;
-                    @apply hover:underline;
+                    @apply text-sm font-medium relative text-gray-400 duration-150;
+                    @apply  hover:text-tertiary;
+
                 }
 
                 .nav__link__active{
-                    @apply underline;
+                    @apply font-semibold text-tertiary;
                 }
             }
         }

@@ -3,6 +3,7 @@ export interface ProjectsEntity {
     sections: SectionProject[];
     timeCreated: string;
     title: string;
+    description: string;
 }
 
 interface SectionProject {

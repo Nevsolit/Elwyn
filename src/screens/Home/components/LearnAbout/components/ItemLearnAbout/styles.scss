@@ -2,16 +2,17 @@
     @apply w-full;
 
     &__small_image{
-        @apply bg-gray-100 h-[200px];
-        @apply md:h-[171px] xl:h-[271px];
+        @apply bg-gray-100 h-[200px] rounded-xl overflow-hidden;
+        @apply md:h-[167px] xl:h-[267px];
 
         img{
-            @apply h-full w-full object-cover;
+            @apply h-full w-full object-cover duration-300;
+            @apply hover:brightness-75;
         }
     }
 
     &__image{
-        @apply h-[350px] w-full bg-gray-100;
+        @apply h-[350px] w-full rounded-xl overflow-hidden bg-gray-100;
         @apply xl:h-[550px];
 
         img{

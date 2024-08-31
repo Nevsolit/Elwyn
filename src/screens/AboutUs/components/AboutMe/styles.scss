@@ -1,9 +1,9 @@
 .about_me__container{
-    @apply w-full flex flex-col;
+    @apply w-full flex gap-4 flex-col;
     @apply md:flex-row;
 
     &__images{
-        @apply flex-1 ;
+        @apply flex-1 rounded-xl overflow-hidden;
 
         img{
             @apply w-full h-full object-cover;
@@ -11,7 +11,7 @@
     }
 
     &__info{
-        @apply flex-1 bg-primary p-8 font-sawarabi;
+        @apply flex-1 bg-primary rounded-xl p-8 font-sawarabi;
         @apply md:justify-center;
 
         h1{

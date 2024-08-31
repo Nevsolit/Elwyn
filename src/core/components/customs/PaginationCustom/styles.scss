@@ -4,7 +4,7 @@
     &__page-item{
 
         button,&__active {
-            @apply w-[42px] border border-secondary h-[42px] cursor-pointer  flex justify-center items-center p-2;
+            @apply w-[42px] rounded-lg border border-secondary h-[42px] cursor-pointer  flex justify-center items-center p-2;
         }
 
         button{
@@ -16,7 +16,7 @@
         }
 
         &__disabled{
-            @apply bg-gray-100 text-gray-300 w-[42px] h-[42px] flex justify-center items-center;
+            @apply bg-gray-100 rounded-lg text-gray-300 w-[42px] h-[42px] flex justify-center items-center;
         }
     }
 }
