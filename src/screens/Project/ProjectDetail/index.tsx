@@ -55,7 +55,7 @@ const ProjectDetailScreen: React.FC = () => {
                         let checkImage = sectionProject.images.length === 1;
                         return (
                             // <Flex key={`content-project-${index}`} direction={"column"} gap={"8"} align={"center"}>
-                            <div className="w-full flex flex-col gap-6">
+                            <div className="w-full flex flex-col gap-6" key={`content-project-${index}`}>
                                 <div className={` ${checkImage ? "wrapper_item_image" : "wrapper_list_item_image"}`}>
                                     {sectionProject.images.map((image, index) => (
                                         <img
