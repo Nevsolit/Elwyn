@@ -1,0 +1,58 @@
+.popular-blogs__container{
+    @apply flex flex-col gap-8;
+    @apply md:flex-row md:gap-4;
+
+    &__popular,  &__trending{
+        @apply flex flex-col gap-4;
+
+        &__title{
+            @apply text-xl font-bold font-sawarabi text-tertiary;
+        }
+    }
+
+    &__popular{
+        @apply md:flex-[2];
+
+        &__content{
+            @apply h-[320px] relative rounded-xl bg-white shadow-default overflow-hidden;
+            @apply md:h-[450px] md:rounded-xl ;
+
+            img{
+                @apply w-full h-full object-cover;
+            }
+
+            &__info{
+                @apply absolute top-0 flex flex-col gap-2 justify-end items-start text-white p-4 left-0 bottom-0 right-0 z-10 bg-gradient-to-t from-[#000000];
+            
+                h2{
+                    @apply text-xl font-bold font-sawarabi cursor-pointer;
+                    @apply hover:underline;
+                }
+
+                p{
+                    @apply text-sm line-clamp-2 text-gray-400;
+                }
+            }
+        }
+    }
+
+    &__trending{
+        @apply md:flex-1;
+
+        &__content{
+            @apply flex flex-col gap-4;
+
+            &__empty{
+                @apply w-full flex justify-center items-center flex-col;
+
+                img{
+                    @apply w-[200px] h-[200px] object-cover;
+                }
+
+                p{
+                    @apply text-lg font-bold font-sawarabi text-tertiary;
+                }
+            }
+        }
+    }
+}

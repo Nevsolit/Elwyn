@@ -13,6 +13,7 @@ import log from "~/core/utils/log";
 import "./styles.scss";
 import { ITEMS_PER_PAGE } from "~/core/constants";
 import { getFilteredCollection } from "~/core/services";
+import PopularBlogs from "./components/PopularBlogs";
 
 const BlogsScreen = () => {
     const { t } = useTranslation("global");
@@ -79,6 +80,14 @@ const BlogsScreen = () => {
         [dispatch, pagination],
     );
 
+    const blogsStatusPopularLatest = listBlogs.filter((blog) => blog.status === "popular");
+    const latestPopularBlog =
+        blogsStatusPopularLatest.length > 0 ? blogsStatusPopularLatest[blogsStatusPopularLatest.length - 1] : null;
+
+    const blogsStatusTrending = listBlogs.filter((blog) => blog.status === "trending");
+
+    const showPopularBlogs = searchTerm === "";
+
     return (
         <div className="blogs__container">
             <WrapperSection
@@ -91,6 +100,9 @@ const BlogsScreen = () => {
             >
                 <Flex direction={"column"} gap={"8"} className="w-full">
                     <HeadBlogs />
+                    {showPopularBlogs && latestPopularBlog && (
+                        <PopularBlogs dataPopular={latestPopularBlog} dataTrending={blogsStatusTrending} />
+                    )}
                     <ListBlogs
                         list={currentBlogs}
                         loading={loading}

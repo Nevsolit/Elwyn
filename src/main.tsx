@@ -17,7 +17,7 @@ import { Loading } from "./core/components/index.ts";
 
 i18next.init({
     interpolation: { escapeValue: false },
-    lng: "en",
+    lng: "vi",
     resources: {
         en: {
             global: global_en,

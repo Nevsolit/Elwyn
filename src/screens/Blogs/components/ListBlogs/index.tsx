@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 import { PaginationCustom, SkeletonItem, WrapperLayoutPresent } from "~/core/components";
 import EmptyData from "~/core/components/shared/EmptyData";
 import ItemBlogs from "~/core/components/shared/ItemBlog";
@@ -14,8 +15,13 @@ interface ListBlogsProps {
 }
 
 const ListBlogs: React.FC<ListBlogsProps> = memo(({ list, loading, totalPages, currentPage, onPageChange }) => {
+    const [t] = useTranslation("global");
+
     return (
         <div className="group__column__center w-full gap-8">
+            <div className="w-full flex justify-start">
+                <h1 className="text-xl font-bold font-sawarabi text-tertiary">{t("blogs.list-blog")}</h1>
+            </div>
             {loading ? (
                 <WrapperLayoutPresent type="row">
                     {fakeData(9).map((_, index) => (

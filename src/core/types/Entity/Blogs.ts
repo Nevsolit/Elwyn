@@ -4,6 +4,8 @@ export interface BlogPost {
     tags: string;
     sections: BlogSection[];
     timeCreated: string;
+    timeUpdated: string;
+    status: "new" | "popular" | "trending" 
 }
 
 interface BlogSection {

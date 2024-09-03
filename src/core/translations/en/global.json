@@ -66,7 +66,11 @@
         "title": "Blogs",
         "description": "Some of the articles share our stories, knowledge, experiences and experiences.",
         "search": "Search",
-        "placeholder-search": "Search blog name"
+        "placeholder-search": "Search blog name",
+        "popular": "Popular",
+        "trending": "Trending",
+        "update-at": "Update at",
+        "list-blog": "List of blogs"
     },
     "404": {
         "description": "Oh my wonderful eyes must sometimes get lost. Let me paint a beautiful picture for life to brighten your life's path!",
@@ -133,5 +137,9 @@
     },
     "notificaions": {
         "success-subscribe": "You have successfully subscribed to our newsletter!"
+    },
+    "filter": {
+        "newest" : "Newest",
+        "oldest" : "Oldest"
     }
 }

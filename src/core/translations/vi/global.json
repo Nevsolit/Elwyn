@@ -66,7 +66,11 @@
         "title": "Blogs",
         "description": "Những bài viết mới nhất từ blog của tôi.",
         "search": "Tìm kiếm",
-        "placeholder-search": "Tìm kiếm tên blog"
+        "placeholder-search": "Tìm kiếm tên blog",
+        "popular": "Phổ biến",
+        "trending": "Xu hướng",
+        "update-at": "Cập nhật lúc",
+        "list-blog": "Danh sách bài viết"
     },
     "404": {
         "header": "Trang không tồn tại",
@@ -76,7 +80,7 @@
         "title": "Liên hệ",
         "description": "Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào, hãy liên hệ với chúng tôi bằng cách điền vào biểu mẫu dưới đây."
     },
-    "empty": {
+    "empty_data": {
         "title": "Không có dữ liệu",
         "description": "Không có dữ liệu để hiển thị."
     },
@@ -133,5 +137,9 @@
     },
     "notificaions":{
         "success-subscribe": "Bạn đã đăng ký nhận bản tin của chúng tôi thành công!"
+    },
+    "filter": {
+        "newest" : "Mới nhất",
+        "oldest" : "Cũ nhất"
     }
 }

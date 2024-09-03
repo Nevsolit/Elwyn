@@ -1,0 +1,20 @@
+.item-blog-trending__container{
+    @apply w-full gap-2 flex;
+
+    &__image{
+        @apply w-[100px] h-[100px] object-cover rounded-xl ;
+    }
+
+    &__content{
+        @apply flex flex-col gap-2 flex-1;
+
+        h2{
+            @apply text-base font-bold text-tertiary line-clamp-2 font-sawarabi cursor-pointer;
+            @apply hover:underline;
+        }
+
+        p{
+            @apply text-sm line-clamp-2 text-gray-400;
+        }
+    }
+}
