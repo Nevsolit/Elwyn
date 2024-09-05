@@ -141,5 +141,12 @@
     "filter": {
         "newest" : "Newest",
         "oldest" : "Oldest"
+    },
+    "share-life": {
+        "title": "Share Life",
+        "description": "IHere I will share about life around me and share about my own development process.",
+        "search": "Search",
+        "placeholder-search": "Search",
+        "view-detail": "View detail"
     }
 }

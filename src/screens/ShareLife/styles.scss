@@ -1,0 +1,21 @@
+.share-life__container{
+    @apply w-full flex items-center flex-col ;
+
+    &__wrapper{
+        @apply w-full flex flex-col gap-4;
+    }
+}
+
+.skeleton-item-share-life{
+    @apply w-full flex gap-4;
+
+    &__left{
+        @apply w-[120px] h-[120px] rounded-xl bg-gray-300 animate-pulse;
+        @apply md:w-[200px] md:h-[200px] lg:w-[320px] lg:h-[260px];
+    }
+
+    &__right{
+        @apply flex-1 h-[120px] rounded-xl bg-gray-300 animate-pulse;
+        @apply md:h-[200px] lg:h-[260px];
+    }
+}

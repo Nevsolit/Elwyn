@@ -39,7 +39,7 @@ const InformationCollectionNotice: React.FC = () => {
                     <h1 className="title__v2">{t("privacy-policy.title")}</h1>
                     <hr />
                     {informationCollectionNotice.map((items, index) => (
-                        <div key={index} className="box__content__v2">
+                        <div key={`infomation-collection-notice-${index}`} className="box__content__v2">
                             <h2>{items.title}</h2>
                             <p>{items.description}</p>
                         </div>

@@ -8,6 +8,9 @@ const PATHS = {
     BLOG : 'blogs',
     BLOG_DETAIL : 'blogs/:blogId',
 
+    SHARE_LIFE : 'share-life',
+    SHARE_LIFE_DETAIL : 'share-life/:shareLifeId',
+
     TERMS_OF_USE: 'terms-of-use',
     PRIVACY_POLICY: 'privacy-policy',
     INFORMATION_COLLECTION_NOTICE: 'information-collection-notice',

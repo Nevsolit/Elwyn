@@ -80,15 +80,22 @@ export async function getLatestItems(collectionName: string, feild: string, limi
     }
 }
 
-export async function getItemsByTags(collectionName: string, tag: string, limitCount: number) {
+export async function getItemsByTags(collectionName: string, tag: string, limitCount?: number) {
     try {
         const collectionRef = collection(db, collectionName);
-        const q = query(
-            collectionRef,
-            where("tags", "==", tag),  
-            // orderBy("timeCreated", "desc"),
-            limit(limitCount)
-        );
+        let q;
+        if(limitCount) {
+             q = query(
+                collectionRef,
+                where("tags", "==", tag),  
+                limit(limitCount)
+            );
+        } else {
+            q = query(
+                collectionRef,
+                where("tags", "==", tag),  
+            );
+        }
         const querySnapshot = await getDocs(q);
         return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     } catch (error) {

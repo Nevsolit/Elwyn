@@ -141,5 +141,12 @@
     "filter": {
         "newest" : "Mới nhất",
         "oldest" : "Cũ nhất"
+    },
+    "share-life": {
+        "title": "Chia sẻ cuộc sống",
+        "description": "Ở đây tôi sẽ chia sẻ về cuộc sống xung quanh tôi và chia sẻ về quá trình phát triển của riêng tôi.",
+        "search": "Tìm kiếm",
+        "placeholder-search": "Tìm kiếm bài viết",
+        "view-detail": "Xem chi tiết"
     }
 }
