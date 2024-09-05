@@ -22,7 +22,7 @@ const ShareLifeScreen: React.FC = () => {
                             <div className="skeleton-item-share-life__right" />
                         </div>
                     ))
-                ) : blogs.length > 1 ? (
+                ) : blogs.length > 0 ? (
                     blogs.map((blog) => <ItemShareLife key={blog.id} data={blog} />)
                 ) : (
                     <EmptyData />
