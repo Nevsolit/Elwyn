@@ -18,7 +18,7 @@ const Achievements: React.FC = () => {
     const handleGetThreeLastestProjects = useCallback(async () => {
         dispatch(ProjectsActions.update({ loading: true }));
         try {
-            const projects = await getLatestItems("blogs", "timeCreated", 3);
+            const projects = await getLatestItems("blogs", "timeCreated", 2);
             setListProjects(projects as BlogPost[]);
         } catch (error) {
             log("error", "handleGetThreeLastestProjects", error);
@@ -41,7 +41,7 @@ const Achievements: React.FC = () => {
                 </h1>
             }
         >
-            <WrapperLayoutPresent type="row">
+            <WrapperLayoutPresent colums={2} gap={8} type="row">
                 {loading
                     ? fakeData(3).map((_, index) => <SkeletonItem key={`skeleton-item-project-home-${index}`} />)
                     : listProjects.length > 0

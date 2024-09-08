@@ -1,0 +1,57 @@
+.infomation-detail-container{
+    @apply flex flex-col gap-8;
+
+    &__account{
+        @apply flex gap-4 py-8 border-b border-gray-200;
+        @apply lg:flex-col;
+
+        &__avatar{
+            @apply w-20 h-20 object-cover shadow-default rounded-full;
+        }
+
+        &__info{
+            @apply flex flex-col flex-1 gap-2;
+
+            h1{
+                @apply text-xl font-bold;
+            }
+
+            p{
+                @apply text-sm text-gray-700;
+            }
+        }
+    }
+
+    &__content{
+        @apply flex flex-col gap-4;
+
+        &__images{
+            @apply flex flex-col  gap-4;
+
+            &__img{
+                @apply w-full h-[400px] relative rounded-2xl duration-300;
+
+                img{
+                    @apply w-full h-full object-cover rounded-2xl;
+                }
+
+                &__info{
+                    @apply absolute bottom-0 left-0 flex flex-col gap-2 items-start justify-start right-0 p-8 ;
+                    @apply lg:p-4;
+
+                    span{
+                        @apply text-sm py-1.5 px-2 rounded-full bg-[#00000075] text-white;
+                    }
+
+                    h2{
+                        @apply text-lg font-bold ;
+                    }
+
+                    button {
+                        @apply font-bold;
+                    }
+                }
+            }
+        }
+    }
+}

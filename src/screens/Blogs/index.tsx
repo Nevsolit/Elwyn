@@ -6,14 +6,14 @@ import HeadBlogs from "./components/HeadBlogs";
 import ListBlogs from "./components/ListBlogs";
 
 import { useCallback, useEffect, useMemo } from "react";
+import { ITEMS_PER_PAGE } from "~/core/constants";
 import { useAppDispatch, useAppSelector } from "~/core/hooks";
+import { getItemsByTags } from "~/core/services";
 import { BlogsActions } from "~/core/store";
 import { BlogPost } from "~/core/types";
 import log from "~/core/utils/log";
-import "./styles.scss";
-import { ITEMS_PER_PAGE } from "~/core/constants";
-import { getFilteredCollection } from "~/core/services";
 import PopularBlogs from "./components/PopularBlogs";
+import "./styles.scss";
 
 const BlogsScreen = () => {
     const { t } = useTranslation("global");
@@ -27,7 +27,8 @@ const BlogsScreen = () => {
             let fetchedBlogs: BlogPost[];
 
             // Fetch tất cả blogs
-            fetchedBlogs = (await getFilteredCollection("blogs", "timeCreated", ">=", "")) as BlogPost[];
+            // fetchedBlogs = (await getFilteredCollection("blogs", "timeCreated", ">=", "")) as BlogPost[];
+            fetchedBlogs = (await getItemsByTags("blogs", "blog")) as BlogPost[];
 
             // Lọc blogs theo searchTerm nếu có
             if (searchTerm) {

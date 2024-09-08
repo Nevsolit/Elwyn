@@ -4,24 +4,24 @@
     }
 
     &__drawer{
-        @apply  fixed top-0 left-0 bottom-0 right-0 bg-black-brightness-70;
+        @apply  fixed top-0 left-0 bottom-0 right-0 backdrop-blur-[2rem];
 
         .drawer__content{
-            @apply bg-white max-w-[360px] h-full shadow-md;
+            @apply bg-surface max-w-[360px] h-full shadow-xl rounded-r-2xl;
 
             &__head{
-                @apply p-4;
+                @apply p-4 border-b border-gray-200 flex justify-end;
             }
 
             &__nav{
                 @apply p-4;
 
                 &__link{
-                    @apply py-3 text-sm font-medium border-b border-gray-300 text-cl-gray duration-150;
+                    @apply py-3 text-xl text-gray-500 font-semibold  duration-150;
                 }
 
                 .nav__link__active{
-                    @apply underline ;
+                    @apply text-black ;
                 }
             }
         }
@@ -29,21 +29,24 @@
 
     &__navLink{
         .drawer__content{
+
             &__head{
                 @apply lg:hidden;
             }
 
             &__nav{
-                @apply gap-6;
+                @apply backdrop-blur-[2rem]  py-3 px-6 rounded-xl;
 
                 &__link{
-                    @apply text-sm font-medium relative text-gray-400 duration-150;
-                    @apply  hover:text-tertiary;
-
+                    @apply text-sm py-1.5 rounded-lg px-3 font-semibold relative text-gray-700 duration-300;
+                    
+                    &:hover {
+                        box-shadow: 0px 0px 24px 9px rgba(0,0,0,0.05) inset;
+                    }
                 }
 
                 .nav__link__active{
-                    @apply font-semibold text-tertiary;
+                    @apply font-bold text-black;
                 }
             }
         }

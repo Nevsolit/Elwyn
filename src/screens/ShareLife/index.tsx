@@ -5,7 +5,6 @@ import ItemShareLife from "./components/ItemShareLife";
 import { useGetBlogsByTags } from "~/core/hooks";
 import { useMemo } from "react";
 import fakeData from "~/core/utils/fakeData";
-import EmptyData from "~/core/components/shared/EmptyData";
 
 const ShareLifeScreen: React.FC = () => {
     const [t] = useTranslation("global");
@@ -15,18 +14,16 @@ const ShareLifeScreen: React.FC = () => {
     const renderContent = useMemo(() => {
         return (
             <div className="share-life__container__wrapper">
-                {loading ? (
-                    fakeData(3).map((_, index) => (
-                        <div className="skeleton-item-share-life" key={`fake-item-share-like-${index}`}>
-                            <div className="skeleton-item-share-life__left" />
-                            <div className="skeleton-item-share-life__right" />
-                        </div>
-                    ))
-                ) : blogs.length > 0 ? (
-                    blogs.map((blog) => <ItemShareLife key={blog.id} data={blog} />)
-                ) : (
-                    <EmptyData />
-                )}
+                {loading
+                    ? fakeData(3).map((_, index) => (
+                          <div className="skeleton-item-share-life" key={`fake-item-share-like-${index}`} />
+                      ))
+                    : blogs.length > 0
+                    ? blogs.map((blog) => <ItemShareLife key={blog.id} data={blog} />)
+                    : // <EmptyData />
+                      fakeData(3).map((_, index) => (
+                          <div className="skeleton-item-share-life" key={`fake-item-share-like-${index}`} />
+                      ))}
             </div>
         );
     }, [blogs]);

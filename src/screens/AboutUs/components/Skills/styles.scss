@@ -3,10 +3,10 @@
     @apply md:flex-row;
 
     &__list_skill{
-        @apply flex-1 font-sawarabi;
+        @apply flex-1 font-nunito;
 
         h1{
-            @apply  text-tertiary font-semibold text-lg;
+            @apply   font-semibold text-lg;
             @apply md:text-xl;
         }
 
@@ -23,7 +23,7 @@
         @apply flex-1 ;
 
        &__video{
-            @apply w-full h-[350px] rounded-xl overflow-hidden;
+            @apply w-full h-[350px] rounded-2xl overflow-hidden;
 
             iframe{
                 @apply w-full h-full object-cover;

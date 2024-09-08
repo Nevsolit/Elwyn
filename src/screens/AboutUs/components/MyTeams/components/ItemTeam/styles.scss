@@ -13,11 +13,11 @@
         @apply py-4 items-center;
 
         h1{
-            @apply font-sawarabi text-xl text-tertiary ;
+            @apply font-nunito text-lg text-black font-bold ;
         }
 
         p{
-            @apply text-center text-cl-gray;
+            @apply text-center text-gray-400 text-sm;
         }
     }
 }

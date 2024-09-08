@@ -19,9 +19,9 @@ const BackPage: React.FC<BackPageProps> = ({ type = "default", background = "pri
     return (
         <button
             onClick={handleBack}
-            className={`group__center ${type === "detail" && "back_page__detail"} bg-${background} ${
-                background === "primary" ? "text-secondary" : "text-white"
-            }`}
+            className={`group__center ${type === "detail" && "back_page__detail"} ${
+                background === "primary" ? `bg-${background}` : `bg-gray-300`
+            } ${background === "primary" ? "text-secondary" : "text-gray-600"}`}
         >
             {type === "default" ? <ChevronLeft size={24} className="text-tertiary" /> : <X size={24} />}
         </button>

@@ -16,6 +16,8 @@ const BlogDetailScreen = React.lazy(() => import("~/screens/Blogs/BlogDetail"));
 const ShareLifeScreen = React.lazy(() => import("~/screens/ShareLife"));
 const ShareLifeDetailScreen = React.lazy(() => import("~/screens/ShareLife/DetailShareLife"));
 
+const ContactMeScreen = React.lazy(() => import("~/screens/ContactMe"));
+
 const TermsOfUseScreen = React.lazy(() => import("~/screens/TermsOfUse"));
 const InformationCollectionNoticeScreen = React.lazy(() => import("~/screens/InformationCollectionNotice"));
 const PrivacyPolicyScreen = React.lazy(() => import("~/screens/PrivacyPolicy"));
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: PATHS.SHARE_LIFE_DETAIL,
                 element: <ShareLifeDetailScreen />,
+            },
+            {
+                path: PATHS.CONTACT_ME,
+                element: <ContactMeScreen />,
             },
             {
                 path: PATHS.TERMS_OF_USE,

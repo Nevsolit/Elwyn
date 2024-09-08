@@ -12,7 +12,7 @@ const Goals: React.FC = () => {
 
     const renderContent = useMemo(() => {
         return (
-            <WrapperLayoutPresent type="long-short">
+            <WrapperLayoutPresent type="long-short" gap={8}>
                 {blogs.length > 1
                     ? blogs.map((blog, index) => (
                           <ItemGoals

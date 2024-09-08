@@ -1,0 +1,43 @@
+.detail-share-life__container{
+    @apply w-full flex flex-col gap-12;
+    @apply lg:flex-row lg:flex-1 lg:max-w-[1024px];
+
+    &__post{
+        @apply flex flex-col gap-4;
+        @apply lg:flex-1;
+
+        &__head{
+            @apply flex flex-col gap-2;
+
+            &__time{
+                @apply text-sm text-gray-500;
+            }
+
+            h1{
+                @apply text-3xl font-extrabold;
+            }
+        }
+
+        &__content{
+            @apply flex flex-col gap-8 ;
+        
+            &__image{
+                @apply flex flex-col gap-2;
+                @apply lg:gap-4;
+
+                img{
+                    @apply rounded-2xl;
+                }
+            }
+
+            p{
+                @apply text-base;
+            }
+        }
+    }
+
+    &__infomation{
+        @apply flex flex-col gap-4;
+        @apply lg:w-[280px];
+    }
+}

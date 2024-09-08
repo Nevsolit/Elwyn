@@ -1,4 +1,3 @@
-import { Filter } from "lucide-react";
 import { HTMLProps, memo } from "react";
 
 type ButtonFilterProps = {
@@ -7,9 +6,9 @@ type ButtonFilterProps = {
 
 const ButtonFilter: React.FC<ButtonFilterProps> = (props) => {
     return (
-        <button className="btn__default gap-2 rounded-lg flex-center" title={props.title} onClick={props.onClick}>
-            <Filter size={24} />
-            <span>{props.text}</span>
+        <button className="btn__default gap-2 rounded-xl flex-center" title={props.title} onClick={props.onClick}>
+            {/* <Filter size={24} /> */}
+            <span className="font-bold">{props.text}</span>
         </button>
     );
 };

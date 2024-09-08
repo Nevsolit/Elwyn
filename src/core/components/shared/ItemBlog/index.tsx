@@ -20,9 +20,7 @@ const ItemBlogs: React.FC<ItemBlogsProps> = (props) => {
 
     return (
         <Link to={`/${PATHS.BLOG}/${props.data.id}`} className="item__blogs__container">
-            <div className="item__blogs__container__image">
-                <img src={images} alt={props.data.title} />
-            </div>
+            <img src={images} alt={props.data.title} className="item__blogs__container__image" />
             <div className="item__blogs__container__content flex-column">
                 <h1>{props.data.title}</h1>
                 <p>

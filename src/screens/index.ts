@@ -6,5 +6,6 @@ export {default as ShareLife} from './ShareLife'
 export {default as TermsOfUse} from './TermsOfUse'
 export {default as InformationCollectionNotice} from './InformationCollectionNotice'
 export {default as PrivacyPolicy} from './PrivacyPolicy'
+export {default as ContactMe} from './ContactMe'
 export {default as ProjectDetailScreen} from './Project/ProjectDetail'
 

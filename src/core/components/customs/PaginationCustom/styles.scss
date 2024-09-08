@@ -4,19 +4,19 @@
     &__page-item{
 
         button,&__active {
-            @apply w-[42px] rounded-lg border border-secondary h-[42px] cursor-pointer  flex justify-center items-center p-2;
+            @apply w-[40px] rounded-xl text-sm  border h-[40px] cursor-pointer  flex justify-center items-center p-2;
         }
 
         button{
-            @apply bg-white  text-secondary;
+            @apply  text-gray-400;
         }
 
         &__active{
-            @apply bg-secondary text-white;
+            @apply bg-black font-bold border-black  text-white;
         }
 
         &__disabled{
-            @apply bg-gray-100 rounded-lg text-gray-300 w-[42px] h-[42px] flex justify-center items-center;
+            @apply bg-gray-100 rounded-xl text-gray-400 w-[40px] h-[40px] flex justify-center items-center;
         }
     }
 }

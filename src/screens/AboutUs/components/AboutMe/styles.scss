@@ -11,16 +11,20 @@
     }
 
     &__info{
-        @apply flex-1 bg-primary rounded-xl p-8 font-sawarabi;
-        @apply md:justify-center;
+        @apply flex-1 p-8 font-nunito;
+        @apply md:justify-center md:items-start;
 
         h1{
-            @apply text-lg text-tertiary font-semibold;
+            @apply text-lg  font-semibold;
             @apply md:text-xl;
         }
 
         h2{
-            @apply text-secondary ;
+            @apply text-gray-500 mt-2;
+        }
+
+        h3{
+            @apply font-bold text-sm py-1.5 px-4 rounded-full bg-[#242424] text-white;
         }
 
         p{

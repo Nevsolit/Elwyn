@@ -37,11 +37,10 @@ input[type="text"]{
 }
 
 .title__section{
-  @apply font-sawarabi text-center max-w-[420px];
-  @apply lg:text-lg;
+  @apply font-nunito text-center max-w-[420px];
 
   span{
-    @apply text-tertiary underline px-1.5;
+    @apply font-bold text-xl px-1.5;
   }
 }
 
@@ -49,12 +48,12 @@ input[type="text"]{
   @apply flex flex-col items-center;
 
   h1{
-    @apply font-sawarabi text-lg text-tertiary text-center max-w-[420px];
+    @apply font-nunito text-lg text-black font-bold text-center max-w-[420px];
     @apply lg:text-2xl;
   }
 
   p{
-    @apply text-sm text-cl-gray  max-w-[420px] text-center;
+    @apply text-base text-cl-gray  max-w-[420px] text-center;
     
   }
 }
@@ -76,20 +75,20 @@ input[type="text"]{
 }
 
 .btn__default{
-  @apply bg-tertiary font-medium duration-200 text-white text-sm px-4 py-2;
+  @apply bg-[#222227] font-medium duration-200 text-white text-sm px-4 h-[40px] py-2;
   @apply active:brightness-75 hover:brightness-90;
 }
 
 
 .title__v2 {
-  @apply text-lg text-tertiary font-sawarabi;
+  @apply text-lg text-tertiary font-nunito;
 }
 
 .box__content__v2{
   @apply flex flex-col gap-2;
   
   h2{
-    @apply  text-tertiary font-sawarabi;
+    @apply  text-tertiary font-nunito;
   }
 
   p{

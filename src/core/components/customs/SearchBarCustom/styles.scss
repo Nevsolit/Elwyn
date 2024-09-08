@@ -6,10 +6,10 @@
         @apply  rounded-lg w-full max-w-[420px] flex;
 
         input {
-            @apply flex-1 bg-gray-100 text-sm font-medium rounded-lg py-2 px-4  h-[40px];
+            @apply flex-1 bg-white border text-sm font-medium rounded-xl py-2 px-4  h-[40px];
         
             &:focus{
-                @apply outline-secondary;
+                @apply outline-gray-200;
             }
         }
     }

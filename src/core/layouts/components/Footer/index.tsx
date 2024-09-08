@@ -1,5 +1,4 @@
 import { Facebook, Instagram } from "lucide-react";
-import Images from "~/assets/imgs";
 import "./styles.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -52,6 +51,9 @@ const Footer: React.FC = () => {
                 <ContactInfo t={t} />
                 <NewsletterForm email={email} setEmail={setEmail} t={t} onSubmit={handleSubscribe} loading={loading} />
             </div>
+            <div className="footer__container__wrapper__second">
+                <p className="text-sm">© 2024 Elwyn Studio | Built with Min</p>
+            </div>
         </footer>
     );
 };
@@ -68,10 +70,10 @@ const ContactInfo: React.FC<{ t: (key: string) => string }> = ({ t }) => (
 const SocialLinks: React.FC = () => (
     <div className="group__row">
         <a href="https://www.instagram.com/ktys4tt/" target="_blank" rel="noopener noreferrer">
-            <Instagram />
+            <Instagram size={16} />
         </a>
         <a href="https://www.facebook.com/kien.mon.33" target="_blank" rel="noopener noreferrer">
-            <Facebook />
+            <Facebook size={16} />
         </a>
     </div>
 );
@@ -87,13 +89,13 @@ interface NewsletterFormProps {
 const NewsletterForm: React.FC<NewsletterFormProps> = ({ t, onSubmit, loading, email, setEmail }) => (
     <div className="wrapper__form group__center">
         <form className="group__column items-center" onSubmit={onSubmit}>
-            <div className="wrapper__form__image">
+            {/* <div className="wrapper__form__image">
                 <img src={Images.avatarFooter} alt="Elwyn" />
-            </div>
-            <div className="group__column__center">
+            </div> */}
+            {/* <div className="group__column__center">
                 <h1>{t("footer.Elwyn-Studio-Newsletter")}</h1>
                 <p>{t("footer.contact")}</p>
-            </div>
+            </div> */}
             <div className="wrapper__form__input">
                 <input
                     type="email"

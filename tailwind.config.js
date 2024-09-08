@@ -15,6 +15,8 @@ module.exports = {
           secondary: "#AF8F6F",
           tertiary: "#74512D",
           quaternary: "#543310",
+
+          surface: "#fdfcf9"
         },
         textColor: {
           'cl-gray': '#7D7D7D',
@@ -22,10 +24,12 @@ module.exports = {
         boxShadow: {
           default: "0 0 24px 12px #F3F3F3",
           v2: "0 0 24px 12px #ECECEC",
+          v3: "0 0 24px 12px #D4D4D4",
         },
         fontFamily: {
-          satisfy: ["Satisfy", "cursive"],
-          sawarabi: ["Sawarabi Mincho", "serif"],
+          // satisfy: ["Satisfy", "cursive"],
+          // nunito: ["nunito Mincho", "serif"],
+          nunito: ["Nunito", "sans-serif"],
         }
       },
       container: {

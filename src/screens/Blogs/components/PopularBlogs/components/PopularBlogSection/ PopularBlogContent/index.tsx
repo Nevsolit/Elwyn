@@ -10,10 +10,10 @@ type PopularBlogContentProps = {
 const PopularBlogContent: React.FC<PopularBlogContentProps> = memo(({ blog }) => (
     <Link to={`/${PATHS.BLOG}/${blog.id}`} className="popular-blogs__container__popular__content">
         {blog.sections?.[0]?.images?.[0]?.url && <img src={blog.sections[0].images[0].url} alt={blog.title} />}
-        <div className="popular-blogs__container__popular__content__info">
+        {/* <div className="popular-blogs__container__popular__content__info">
             <h2>{blog.title}</h2>
             <p>{blog.sections?.[0]?.contents?.[0]}</p>
-        </div>
+        </div> */}
     </Link>
 ));
 

@@ -8,7 +8,7 @@ import { useMemo } from "react";
 const LearnAbout: React.FC = () => {
     const { t } = useTranslation("global");
 
-    const { blogs } = useGetBlogsByTags("learn-about", 4);
+    const { blogs } = useGetBlogsByTags("learn-about", 3);
 
     const renderContent = useMemo(() => {
         if (blogs.length < 3) {
@@ -29,7 +29,7 @@ const LearnAbout: React.FC = () => {
         }
 
         return (
-            <WrapperLayoutPresent type="row">
+            <WrapperLayoutPresent type="row" colums={2} gap={8}>
                 {blogs.length > 0 && <ItemLearnAbout data={blogs[0]} />}
 
                 {blogs.length > 2 && (

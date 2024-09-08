@@ -1,6 +1,10 @@
 .footer__container{
-    @apply w-full px-4 py-8 bg-primary ;
-    @apply lg:px-0 lg:py-12;
+    @apply w-full px-4 py-8 flex flex-col gap-12 border-t border-gray-200;
+    @apply lg:px-0 lg:pt-12 lg:mt-24;
+
+    &__wrapper__second{
+        @apply container gap-8 pt-8 border-t border-gray-200 ;
+    }
 
     &__wrapper{
         @apply container gap-8 flex flex-col;
@@ -10,15 +14,15 @@
             @apply w-full max-w-[532px] m-auto;
 
             h1,p, a{
-                @apply font-sawarabi ;
+                @apply font-nunito ;
             }
 
             h1{
-                @apply text-xl text-tertiary;
+                @apply text-xl font-bold;
             }
 
             p{
-                @apply text-sm text-secondary;
+                @apply text-sm ;
             }
 
             a{
@@ -27,7 +31,7 @@
 
             .group__row{
                 a{
-                    @apply p-2 rounded-full bg-tertiary text-white;
+                    @apply p-2 rounded-full bg-gray-800 text-white;
                 }
             }
         }
@@ -36,7 +40,7 @@
             @apply w-full ;
 
             form{
-                @apply bg-white rounded-xl p-4  items-center max-w-[532px];
+                @apply  rounded-xl p-4  items-center max-w-[532px];
                 @apply lg:py-8;
             }
 
@@ -48,32 +52,33 @@
                 }
             }
             &__input{
-                @apply w-full border border-tertiary max-w-[372px] flex rounded-lg overflow-hidden;
+                @apply w-full  max-w-[372px] flex border-gray-200 border rounded-xl overflow-hidden;
+                
                 
                 input {
-                    @apply flex-1 py-2 px-4;
+                    @apply flex-1 py-2 px-4 outline-none border-none text-sm font-semibold;
                 }
             }
 
             &__subscribing{
-                @apply text-sm text-center max-w-[484px] text-cl-gray;
+                @apply text-sm text-center max-w-[484px] text-gray-500;
 
                 a{
-                    @apply text-secondary underline;
+                    @apply text-black underline;
                 }
             }
 
             .group__column__center{
                 h1,p{
-                    @apply font-sawarabi ;
+                    @apply font-nunito ;
                 }
     
                 h1{
-                    @apply text-lg text-tertiary;
+                    @apply text-lg  font-bold;
                 }
     
                 p{
-                    @apply text-sm text-secondary text-center;
+                    @apply text-sm text-center;
                 }
             }
         }

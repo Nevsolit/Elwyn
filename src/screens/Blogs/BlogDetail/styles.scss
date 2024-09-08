@@ -9,15 +9,15 @@
         @apply items-start justify-start;
 
         h1{
-            @apply text-lg font-sawarabi text-tertiary;
+            @apply text-2xl font-nunito font-bold;
         }
 
         span{
-            @apply text-sm py-1.5 px-4 rounded-full font-semibold bg-secondary text-white;
+            @apply text-sm py-1.5 px-4 rounded-full font-semibold bg-black font-bold text-white;
         }
     }
 
     &__image{
-        @apply w-full object-cover bg-gray-300 rounded-xl;
+        @apply w-full object-cover bg-gray-300 rounded-2xl;
     }
 }

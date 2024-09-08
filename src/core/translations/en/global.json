@@ -35,6 +35,10 @@
             "second" : "of the latest",
             "third" : "blog posts"
         },
+        "slide-work": {
+            "first": "My", 
+            "second": "Favourite books!"
+        },
         "title-goals": {
             "first" : "A little bit about",
             "second" : "passion",
@@ -144,7 +148,7 @@
     },
     "share-life": {
         "title": "Share Life",
-        "description": "IHere I will share about life around me and share about my own development process.",
+        "description": "Here I will share about life around me and share about my own development process.",
         "search": "Search",
         "placeholder-search": "Search",
         "view-detail": "View detail"

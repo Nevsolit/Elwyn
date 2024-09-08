@@ -6,7 +6,7 @@
         @apply flex flex-col gap-4;
 
         &__title{
-            @apply text-xl font-bold font-sawarabi text-tertiary;
+            @apply text-xl font-bold font-nunito text-black;
         }
     }
 
@@ -14,18 +14,19 @@
         @apply md:flex-[2];
 
         &__content{
-            @apply h-[320px] relative rounded-xl bg-white shadow-default overflow-hidden;
-            @apply md:h-[450px] md:rounded-xl ;
+            @apply h-[320px] relative rounded-2xl bg-white shadow-default overflow-hidden;
+            @apply md:h-[450px] md:rounded-2xl ;
 
             img{
                 @apply w-full h-full object-cover;
             }
 
             &__info{
-                @apply absolute top-0 flex flex-col gap-2 justify-end items-start text-white p-4 left-0 bottom-0 right-0 z-10 bg-gradient-to-t from-[#000000];
-            
+                @apply absolute top-0 flex flex-col gap-2 justify-end items-start text-white p-4 left-0 bottom-0 right-0 z-10 ;
+                @apply lg:p-8;
+
                 h2{
-                    @apply text-xl font-bold font-sawarabi cursor-pointer;
+                    @apply text-xl font-bold font-nunito cursor-pointer;
                     @apply hover:underline;
                 }
 
@@ -50,7 +51,7 @@
                 }
 
                 p{
-                    @apply text-lg font-bold font-sawarabi text-tertiary;
+                    @apply text-lg font-bold font-nunito text-tertiary;
                 }
             }
         }

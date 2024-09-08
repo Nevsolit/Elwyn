@@ -19,7 +19,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
                     {props?.data?.sections &&
                         props?.data?.sections.map((section, index) => <p key={`about-me-key-${index}`}>{section}</p>)}
                     <div>
-                        <h1>{props?.data?.email}</h1>
+                        <h3>{props?.data?.email}</h3>
                         <h2>{props?.data?.tagId}</h2>
                     </div>
                 </div>

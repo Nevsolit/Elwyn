@@ -3,7 +3,7 @@
     @apply md:h-[412px] lg:px-8 lg:h-[512px] xl:h-[712px] md:mx-0;
 
     &__background {
-        @apply w-full rounded-xl relative overflow-hidden h-full bg-white object-cover duration-200;
+        @apply w-full rounded-2xl relative overflow-hidden h-full bg-white object-cover duration-200;
     
         &_img{
             @apply absolute top-0 left-0 rounded-xl w-full h-full object-cover;
@@ -22,7 +22,7 @@
         }
 
         &__link{
-            @apply text-gray-900 rounded-md bg-white font-semibold absolute bottom-12 left-1/2 -translate-x-1/2 py-3 px-12 cursor-pointer duration-150 ;
+            @apply text-gray-900 rounded-xl bg-white font-semibold absolute bottom-12 left-1/2 -translate-x-1/2 py-3 px-12 cursor-pointer duration-150 ;
             @apply hover:bg-black hover:text-white;
         }
     }

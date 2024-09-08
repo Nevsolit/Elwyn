@@ -1,17 +1,17 @@
 .empty_data__container{
-    @apply w-full flex flex-col gap-4 items-center;
+    @apply w-full flex flex-col gap-4   items-center;
 
     h1{
-        @apply font-sawarabi text-lg text-tertiary text-center max-w-[420px];
+        @apply font-nunito text-lg font-bold text-center max-w-[420px];
         @apply lg:text-2xl;
     }
     
     p{
-        @apply text-sm text-cl-gray  max-w-[420px] text-center;
+        @apply text-sm text-gray-500 max-w-[420px] text-center;
     }
 
     img{
         @apply w-[200px];
-        @apply lg:w-[300px]
+        @apply lg:w-[300px];
     }
 }

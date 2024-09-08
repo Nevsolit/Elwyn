@@ -18,18 +18,18 @@ const ListBlogs: React.FC<ListBlogsProps> = memo(({ list, loading, totalPages, c
     const [t] = useTranslation("global");
 
     return (
-        <div className="group__column__center w-full gap-8">
+        <div className="group__column__center w-full gap-4">
             <div className="w-full flex justify-start">
-                <h1 className="text-xl font-bold font-sawarabi text-tertiary">{t("blogs.list-blog")}</h1>
+                <h1 className="text-xl font-bold font-nunito ">{t("blogs.list-blog")}</h1>
             </div>
             {loading ? (
-                <WrapperLayoutPresent type="row">
+                <WrapperLayoutPresent colums={2} type="row" gap={12}>
                     {fakeData(9).map((_, index) => (
                         <SkeletonItem key={`skeleton-item-blog-${index}`} />
                     ))}
                 </WrapperLayoutPresent>
             ) : list.length > 0 ? (
-                <WrapperLayoutPresent type="row">
+                <WrapperLayoutPresent colums={2} type="row" gap={12}>
                     {list.map((blog) => (
                         <ItemBlogs key={blog.id} data={blog} />
                     ))}

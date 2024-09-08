@@ -21,7 +21,7 @@ const MyTeams: React.FC<MyTeamsProps> = (props) => {
                 </div>
             }
         >
-            <WrapperLayoutPresent type="row">
+            <WrapperLayoutPresent type="row" colums={3}>
                 {props?.data &&
                     props?.data.map((member, index) => <ItemTeam data={member} key={`fake-teams-${index}`} />)}
             </WrapperLayoutPresent>

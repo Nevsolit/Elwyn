@@ -2,23 +2,23 @@
     @apply w-full;
 
     &__image{
-        @apply h-[350px] bg-gray-100 rounded-xl overflow-hidden;
+        @apply  bg-gray-100 rounded-2xl overflow-hidden;
 
-        img{
-            @apply object-cover h-full w-full duration-300 ;
-            @apply  hover:brightness-75;
-        }
+        // img{
+        //     @apply object-cover h-full w-full duration-300 ;
+        //     @apply  hover:brightness-75;
+        // }
     }
 
     &__content{
-        @apply py-4 items-start;
+        @apply py-4 items-start flex flex-col gap-2;
 
         h1{
-            @apply font-sawarabi text-xl h-[56px] line-clamp-2 text-tertiary ;
+            @apply font-nunito text-lg line-clamp-2 font-bold ;
         }
 
         p{
-            @apply text-start text-cl-gray;
+            @apply text-start text-gray-500 text-sm;
         }
     }
 }
