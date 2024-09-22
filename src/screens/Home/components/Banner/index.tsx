@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon, MoveRight } from "lucide-react";
 import { memo, useCallback, useEffect, useState } from "react";
 import { getCollection } from "~/core/services";
 import { BannerEntity } from "~/core/types";
@@ -61,26 +61,20 @@ const Banner: React.FC = memo(() => {
                 ))}
             </div>
 
-            {/* {currentBanner && (
-                <img
-                    src={currentBanner.imageUrl}
-                    key={`banner-${currentSlide}`}
-                    alt="elwyn"
-                    className="banner__container__background fade-in"
-                />
-            )} */}
             <div className="banner__container__content absolute-full flex-center">
-                <div className="banner__container__content__btn flex-between">
-                    <button onClick={() => handleNextSlide("prev")}>
-                        <ChevronLeftIcon size={42} />
-                    </button>
-                    <button onClick={() => handleNextSlide("next")}>
-                        <ChevronRightIcon size={42} />
-                    </button>
-                </div>
+                {banners.length > 1 && (
+                    <div className="banner__container__content__btn flex-between">
+                        <button onClick={() => handleNextSlide("prev")}>
+                            <ChevronLeftIcon size={42} />
+                        </button>
+                        <button onClick={() => handleNextSlide("next")}>
+                            <ChevronRightIcon size={42} />
+                        </button>
+                    </div>
+                )}
                 {currentBanner?.link && (
                     <Link target="_blank" to={currentBanner?.link} className="banner__container__content__link ">
-                        Let's go
+                        <MoveRight />
                     </Link>
                 )}
             </div>

@@ -3,6 +3,7 @@ import { Flex } from "@radix-ui/themes";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import NotificationOnWeb from "../components/NotificationOnWeb";
 
 const MainLayout: React.FC = () => {
     // useEffect(() => {
@@ -20,6 +21,7 @@ const MainLayout: React.FC = () => {
             <Header />
             <Outlet />
             <Footer />
+            <NotificationOnWeb />
         </Flex>
     );
 };

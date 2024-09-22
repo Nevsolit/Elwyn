@@ -64,14 +64,32 @@ export async function getLimitedCollection(collectionName: string, limitCount: n
 
 
 // Lấy ra số lượng item mới nhất trong collection
-export async function getLatestItems(collectionName: string, feild: string, limitCount: number) {
+export async function getLatestItems(collectionName: string, field: string, limitCount: number, tag?: string) {
     try {
         const collectionRef = collection(db, collectionName);
-        const q = query(
-            collectionRef,
-            orderBy(feild, "desc"),
-            limit(limitCount)
-        );
+
+         
+        let q;
+        if (tag) {
+            q = query(
+                collectionRef,
+                where("tags", "array-contains", tag),
+                orderBy(field, "desc"),
+                limit(limitCount)
+            );
+        } else {
+            q = query(
+                collectionRef,
+                orderBy(field, "desc"),
+                limit(limitCount)
+            );
+        }
+
+        // const q = query(
+        //     collectionRef,
+        //     orderBy(feild, "desc"),
+        //     limit(limitCount)
+        // );
         const querySnapshot = await getDocs(q);
         return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     } catch (error) {

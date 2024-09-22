@@ -18,7 +18,7 @@ const Achievements: React.FC = () => {
     const handleGetThreeLastestProjects = useCallback(async () => {
         dispatch(ProjectsActions.update({ loading: true }));
         try {
-            const projects = await getLatestItems("blogs", "timeCreated", 2);
+            const projects = await getLatestItems("blogs", "timeCreated", 2, "blog");
             setListProjects(projects as BlogPost[]);
         } catch (error) {
             log("error", "handleGetThreeLastestProjects", error);
