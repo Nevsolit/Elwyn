@@ -18,7 +18,7 @@ const Achievements: React.FC = () => {
     const handleGetThreeLastestProjects = useCallback(async () => {
         dispatch(ProjectsActions.update({ loading: true }));
         try {
-            const projects = await getLatestItems("blogs", "timeCreated", 2, "blog");
+            const projects = await getLatestItems("blogs", "timeCreated", 2);
             setListProjects(projects as BlogPost[]);
         } catch (error) {
             log("error", "handleGetThreeLastestProjects", error);
@@ -30,6 +30,8 @@ const Achievements: React.FC = () => {
     useEffect(() => {
         handleGetThreeLastestProjects();
     }, []);
+
+    log(listProjects);
 
     return (
         <WrapperSection
