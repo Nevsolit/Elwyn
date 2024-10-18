@@ -67,20 +67,13 @@ const Banner: React.FC = memo(() => {
                             <span className="text-black font-medium underline hover:text-gray-500">Learn more</span>
                         </Link>
                     </div>
-                    <div className="banner__container__image">
-                        <img
-                            src={
-                                banners[0]?.imageUrl ||
-                                "https://i.pinimg.com/enabled/564x/6b/f7/82/6bf782ccbb7b03a678385d99d5f05693.jpg"
-                            }
-                            alt="elwyn"
-                            className="banner__container__image__main"
-                        />
+                    <div className="banner__container__image ">
+                        <img src={banners[0]?.imageUrl} alt="" className="banner__container__image__main" />
                         {banners[1]?.imageUrl && (
-                            <img src={banners[1]?.imageUrl} alt="elwyn" className="banner__container__image__first" />
+                            <img src={banners[1]?.imageUrl} alt="" className="banner__container__image__first" />
                         )}
                         {banners[2]?.imageUrl && (
-                            <img src={banners[2]?.imageUrl} alt="elwyn" className="banner__container__image__second" />
+                            <img src={banners[2]?.imageUrl} alt="" className="banner__container__image__second" />
                         )}
                     </div>
                 </div>
