@@ -1,0 +1,13 @@
+.list__projects__container{
+    @apply w-full flex flex-col gap-8;
+
+    &__title{
+        @apply text-2xl font-bold leading-[2.5rem];
+        @apply lg:text-4xl;
+    }
+
+    &__wrapper{
+        @apply w-full flex flex-col gap-8;
+        @apply lg:grid lg:grid-cols-2 lg:gap-16;
+    }
+}

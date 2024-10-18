@@ -29,7 +29,7 @@ const LearnAbout: React.FC = () => {
         }
 
         return (
-            <WrapperLayoutPresent type="row" colums={2} gap={8}>
+            <WrapperLayoutPresent type="row" colums={2}>
                 {blogs.length > 0 && <ItemLearnAbout data={blogs[0]} />}
 
                 {blogs.length > 2 && (

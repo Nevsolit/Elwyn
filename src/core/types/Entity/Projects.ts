@@ -4,6 +4,11 @@ export interface ProjectsEntity {
     timeCreated: string;
     title: string;
     description: string;
+    introduceRole: string;
+    myRole: string;
+    platform: string;
+    problem: string;
+    timeLine: string;
 }
 
 interface SectionProject {

@@ -22,28 +22,28 @@
     },
     "home": {
         "title-introduce": {
-            "first": "Xin chào,",
-            "second": " Tôi là Min! ",
-            "third": "Tôi là một lập trình viên web, thiết kế, tạo nội dung và là người tạo ra những thứ thú vị."
+            "first": "Tìm hiểu",
+            "second": "một chút",
+            "third": "về tôi. Mục đích,tư duy, lối sống và khả năng phát triển trong công việc!"
         },
         "title-learn-about": {
-            "first": "Tìm hiểu một chút về",
-            "second": "Elwyn!"
+            "first": "Hành trình thay đổi, phát triển & Những thành tựu",
+            "second": "tôi đã đạt được!"
         },
         "title-achivements": {
             "first": "Một số",
             "second": "bài viết blog",
-            "third": "mới nhất"
+            "third": "chia sẻ kiến thức và kinh nghiệm mới nhất!"
         },
         "slide-work": {
-            "first": "Sách",
-            "second": "tôi yêu thích!"
+            "first": "Hoạt động nổi bật trong thời gian qua ",
+            "second": "của tôi!"
         },
         "title-goals": {
-            "first": "Một chút về",
+            "first": "Hiểu một chút về",
             "second": "đam mê",
             "third": "và",
-            "fourth": "mục tiêu!"
+            "fourth": "mục tiêu của tôi đã đặt ra!"
         }
     },
     "about-us": {
@@ -56,7 +56,7 @@
             "title": "Khách hàng đã chọn"
         },
         "my-teams": {
-            "title": "Đội của tôi",
+            "title": "Thành viên trong nhóm",
             "description": "Một sự giới thiệu ngắn gọn về một số thành viên của studio của chúng tôi."
         }
     },

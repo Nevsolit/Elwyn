@@ -17,7 +17,7 @@
                 @apply p-4;
 
                 &__link{
-                    @apply py-3 text-xl text-gray-500 font-semibold  duration-150;
+                    @apply py-3 text-xl text-gray-500   duration-150;
                 }
 
                 .nav__link__active{
@@ -38,7 +38,7 @@
                 @apply backdrop-blur-[2rem]  py-3 px-6 rounded-xl;
 
                 &__link{
-                    @apply text-sm py-1.5 rounded-lg px-3 font-semibold relative text-gray-700 duration-300;
+                    @apply text-sm py-1.5 rounded-lg px-3  relative text-gray-700 duration-300;
                     
                     &:hover {
                         box-shadow: 0px 0px 24px 9px rgba(0,0,0,0.05) inset;

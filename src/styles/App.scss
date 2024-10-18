@@ -37,10 +37,10 @@ input[type="text"]{
 }
 
 .title__section{
-  @apply font-nunito text-center max-w-[420px];
+  @apply font-inter text-center max-w-[420px];
 
   span{
-    @apply font-bold text-xl px-1.5;
+    @apply font-bold text-xl px-1.5 bg-gradient-to-r from-[#f9b16e]  to-[#f68080] inline-block text-transparent bg-clip-text;
   }
 }
 
@@ -48,7 +48,7 @@ input[type="text"]{
   @apply flex flex-col items-center;
 
   h1{
-    @apply font-nunito text-lg text-black font-bold text-center max-w-[420px];
+    @apply font-inter text-lg text-black font-bold text-center max-w-[420px];
     @apply lg:text-2xl;
   }
 
@@ -81,14 +81,14 @@ input[type="text"]{
 
 
 .title__v2 {
-  @apply text-lg text-tertiary font-nunito;
+  @apply text-lg text-tertiary font-inter;
 }
 
 .box__content__v2{
   @apply flex flex-col gap-2;
   
   h2{
-    @apply  text-tertiary font-nunito;
+    @apply  text-tertiary font-inter;
   }
 
   p{

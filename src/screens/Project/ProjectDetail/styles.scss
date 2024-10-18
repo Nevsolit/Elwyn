@@ -1,35 +1,69 @@
 .project_detail__container{
-    @apply mt-20 w-full flex justify-center font-nunito text-sm ;
+    @apply w-full flex justify-center font-inter text-sm ;
 
-    &__title{
-        @apply gap-2 max-w-[520px] ;
+   &__wrapper {
+    @apply w-full flex flex-col gap-8 ;
+    @apply lg:gap-16;
 
-        p{
-            @apply text-center text-cl-gray;
-        }
+    &__banner{
+        @apply w-full rounded-2xl shadow-default;
+    }
+
+    &__content{
+        @apply w-full flex flex-col gap-8 m-auto max-w-[860px] ;
+        @apply lg:gap-16;
 
         h1{
-            @apply text-xl text-center text-tertiary;
-            @apply md:text-2xl;
+            @apply font-bold text-2xl;
+            @apply lg:text-3xl xl:text-4xl 2xl:text-5xl 2xl:leading-[4rem];
         }
 
-        span{
-            @apply text-center text-cl-gray;
+        &__info{
+            @apply w-full flex justify-between py-4 border-y border-gray-200;
+            @apply lg:py-8;
+
+            span{
+                @apply text-cl-gray;
+                @apply lg:font-medium;
+            }
+        }
+
+        &__introduce{
+            @apply w-full flex flex-col gap-4;
+
+            h2{
+                @apply font-bold text-2xl;
+            }
+
+            p{
+                @apply text-base;
+            }
+        }
+
+        &__sections{
+            @apply flex flex-col gap-8;
+            @apply lg:gap-16;
+
+            &__items{
+                @apply flex flex-col gap-8;
+                @apply lg:flex-row;
+
+                img{
+                    @apply rounded-2xl shadow-default;
+                    @apply lg:w-[50%];
+                }
+    
+                &__content{
+                    @apply flex flex-col gap-4 ;
+
+                    p{
+                        @apply text-base;
+                    }
+                }
+            }
+
+            
         }
     }
-
-    &__image{
-        @apply w-full object-cover rounded-xl bg-gray-300;
-    }
+   }
 }
-
-.wrapper_list_item_image{
-    @apply p-2 shadow-md bg-primary  rounded-xl w-full columns-1 space-y-2 gap-2;
-    @apply md:columns-2 md:space-y-4 md:gap-4 md:p-4;
-  }
-  
-  .wrapper_item_image{
-    @apply p-2 shadow-md rounded-xl bg-primary w-full;
-    @apply md:p-4;
-  }
-  

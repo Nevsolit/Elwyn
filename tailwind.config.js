@@ -29,7 +29,7 @@ module.exports = {
         fontFamily: {
           // satisfy: ["Satisfy", "cursive"],
           // nunito: ["nunito Mincho", "serif"],
-          nunito: ["Nunito", "sans-serif"],
+          inter: ["Inter", "sans-serif"]
         }
       },
       container: {

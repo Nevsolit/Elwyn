@@ -9,7 +9,7 @@
         @apply mt-8;
 
         h1{
-            @apply text-6xl text-secondary font-bold font-nunito;
+            @apply text-6xl text-secondary font-bold font-inter;
         }
 
         p{
@@ -17,7 +17,7 @@
         }
 
         &__link{
-            @apply mt-8 text-center text-secondary font-bold underline font-nunito;
+            @apply mt-8 text-center text-secondary font-bold underline font-inter;
         }
     }
 }

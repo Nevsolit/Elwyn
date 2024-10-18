@@ -9,11 +9,11 @@
         @apply items-start justify-start;
 
         h1{
-            @apply text-2xl font-nunito font-bold;
+            @apply text-2xl font-inter font-bold;
         }
 
         span{
-            @apply text-sm py-1.5 px-4 rounded-full font-semibold bg-black font-bold text-white;
+            @apply text-sm py-1.5 px-4 rounded-full  bg-black font-bold text-white;
         }
     }
 
@@ -21,3 +21,18 @@
         @apply w-full object-cover bg-gray-300 rounded-2xl;
     }
 }
+
+.wrapper_list_item_image{
+    @apply flex flex-col gap-2;
+    @apply  md:gap-4;
+
+    img{
+        @apply w-full object-cover rounded-xl bg-gray-300;
+    }
+}
+
+  
+.wrapper_item_image{
+    @apply  shadow-md rounded-xl  w-full;
+  }
+  

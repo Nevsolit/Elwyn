@@ -11,14 +11,14 @@
     }
 
     &__content{
-        @apply py-4 items-center;
+        @apply py-4 items-start gap-2;
 
         h1{
-            @apply font-nunito text-xl text-center min-h-[56px] text-tertiary line-clamp-2;
+            @apply font-inter text-xl text-start min-h-[56px] text-black font-semibold line-clamp-2;
         }
 
         p{
-            @apply text-center  text-cl-gray;
+            @apply text-center text-sm text-cl-gray;
         }
     }
 }

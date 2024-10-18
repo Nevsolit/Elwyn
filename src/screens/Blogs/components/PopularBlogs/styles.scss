@@ -6,7 +6,7 @@
         @apply flex flex-col gap-4;
 
         &__title{
-            @apply text-xl font-bold font-nunito text-black;
+            @apply text-xl font-bold font-inter text-black;
         }
     }
 
@@ -26,7 +26,7 @@
                 @apply lg:p-8;
 
                 h2{
-                    @apply text-xl font-bold font-nunito cursor-pointer;
+                    @apply text-xl font-bold font-inter cursor-pointer;
                     @apply hover:underline;
                 }
 
@@ -51,7 +51,7 @@
                 }
 
                 p{
-                    @apply text-lg font-bold font-nunito text-tertiary;
+                    @apply text-lg font-bold font-inter text-tertiary;
                 }
             }
         }

@@ -14,12 +14,12 @@
         @apply items-center justify-center py-4;
 
         h1{
-            @apply font-nunito text-lg font-semibold;
-            @apply md:line-clamp-1 lg:text-xl;
+            @apply font-inter text-lg font-semibold;
+            @apply md:line-clamp-1 lg:text-base;
         }
 
         p{
-            @apply font-nunito text-sm text-gray-500;
+            @apply font-inter text-sm text-gray-500;
         }
     }
 }

@@ -14,7 +14,7 @@
             @apply w-full max-w-[532px] m-auto;
 
             h1,p, a{
-                @apply font-nunito ;
+                @apply font-inter ;
             }
 
             h1{
@@ -70,7 +70,7 @@
 
             .group__column__center{
                 h1,p{
-                    @apply font-nunito ;
+                    @apply font-inter ;
                 }
     
                 h1{

@@ -50,32 +50,32 @@ const ContactMe: React.FC = () => {
         <WrapperSection>
             <div className="contact-me-container">
                 <div className="contact-me-container__wrapper">
-                    <h1>Let's get in touch!</h1>
+                    <h1>Hãy liên lạc với chúng tôi!</h1>
                     <p>
-                        For business enquiries, <span>email me </span>or complete the form below.
+                        Để liên hệ kinh doanh, hãy <span>gửi email cho tôi </span>hoặc điền vào biểu mẫu bên dưới.
                     </p>
                     <div>
-                        <p>For questions regarding UI/UX Design and/or Solopreneurship:</p>
-                        <p>- Check out these Frequently Asked Questions.</p>
-                        <p>- To find out what tools or gears I use, go to Resources.</p>
+                        <p>Đối với các câu hỏi liên quan đến Thiết kế UI/UX và/hoặc Khởi nghiệp cá nhân:</p>
+                        <p>- Xem các Câu hỏi thường gặp này.</p>
+                        <p>- Để tìm hiểu các công cụ hoặc thiết bị tôi sử dụng, hãy truy cập Tài nguyên.</p>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <InputField
-                            label="My name is"
+                            label="Tên tôi là"
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
                             placeholder="Your name"
                         />
                         <InputField
-                            label="I work at"
+                            label="Công ty của tôi là"
                             name="company"
                             value={formData.company}
                             onChange={handleInputChange}
                             placeholder="Company"
                         />
                         <InputField
-                            label="My email is"
+                            label="Email của tôi là"
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
@@ -84,7 +84,7 @@ const ContactMe: React.FC = () => {
                         />
                         <div className="group-form">
                             <label htmlFor="details">
-                                More details about the project (brief summary, deadline etc)
+                                Thông tin chi tiết hơn về dự án (tóm tắt ngắn gọn, thời hạn, v.v.)
                             </label>
                             <textarea
                                 id="details"
@@ -95,7 +95,7 @@ const ContactMe: React.FC = () => {
                             />
                         </div>
                         <button type="submit" disabled={isSubmitting}>
-                            {isSubmitting ? "Submitting..." : "Get in touch"}
+                            {isSubmitting ? "Submitting..." : "Submit"}
                         </button>
                     </form>
                     {submitMessage && <p className="submit-message ">{submitMessage}</p>}

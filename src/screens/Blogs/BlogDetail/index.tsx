@@ -56,7 +56,7 @@ const BlogDeatil: React.FC = () => {
                         let checkImage = sectionsBlog.images.length === 1;
                         return (
                             <div key={`item-section-blog-${index}`} className="group__column">
-                                <div className={checkImage ? "wrapper_item_image" : "wrapper_list_item_image"}>
+                                <div className={checkImage ? "wrapper_item_image" : "wrapper_list_item_image "}>
                                     {sectionsBlog.images.map((image, index) => (
                                         <img
                                             key={`item-section-image-blog-${index}`}

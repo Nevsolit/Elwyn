@@ -31,8 +31,6 @@ const Achievements: React.FC = () => {
         handleGetThreeLastestProjects();
     }, []);
 
-    log(listProjects);
-
     return (
         <WrapperSection
             title={

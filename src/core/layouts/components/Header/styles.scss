@@ -1,6 +1,6 @@
 .header__container{
-    @apply z-50 sticky top-0 bg-surface shadow-2xl  w-full;
-    @apply lg:bg-transparent lg:shadow-none;
+    @apply z-50 sticky top-0 bg-surface shadow-2xl pb-4  w-full;
+    @apply lg:bg-transparent lg:shadow-none lg:pb-0;
 
     &__wrapper{
         @apply container m-auto px-4 pt-4;

@@ -20,7 +20,7 @@ const ListBlogs: React.FC<ListBlogsProps> = memo(({ list, loading, totalPages, c
     return (
         <div className="group__column__center w-full gap-4">
             <div className="w-full flex justify-start">
-                <h1 className="text-xl font-bold font-nunito ">{t("blogs.list-blog")}</h1>
+                <h1 className="text-xl font-bold font-inter ">{t("blogs.list-blog")}</h1>
             </div>
             {loading ? (
                 <WrapperLayoutPresent colums={2} type="row" gap={12}>
