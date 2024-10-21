@@ -49,10 +49,6 @@
                 
                 &__content{
                     @apply flex flex-col gap-4 ;
-
-                    p{
-                        @apply text-base;
-                    }
                 }
             }
 
@@ -60,4 +56,8 @@
         }
     }
    }
+}
+
+.text-first{
+    @apply font-bold text-2xl;
 }

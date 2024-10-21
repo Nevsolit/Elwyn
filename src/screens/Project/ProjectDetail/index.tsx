@@ -94,7 +94,7 @@ const ProjectDetailScreen: React.FC = () => {
                                                 return (
                                                     <p
                                                         key={`content-${index}`}
-                                                        className={checkIndex ? "text-gray-500" : ""}
+                                                        className={checkIndex ? "text-first" : ""}
                                                     >
                                                         {content}
                                                     </p>
