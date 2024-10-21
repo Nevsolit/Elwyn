@@ -47,11 +47,6 @@
             &__items{
                 @apply flex flex-col gap-8;
                 
-
-                img{
-                    @apply rounded-2xl shadow-default;
-                }
-    
                 &__content{
                     @apply flex flex-col gap-4 ;
 
