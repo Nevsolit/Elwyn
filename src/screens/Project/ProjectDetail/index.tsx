@@ -38,8 +38,6 @@ const ProjectDetailScreen: React.FC = () => {
         handleGetBlogDetail();
     }, []);
 
-    log("info", projectDetail);
-
     return (
         <div className="project_detail__container">
             {loading && <Loading />}
@@ -91,9 +89,17 @@ const ProjectDetailScreen: React.FC = () => {
                                             <img key={`image-${index}`} src={image.url} alt={image.uid} />
                                         ))}
                                         <div className="project_detail__container__wrapper__content__sections__items__content">
-                                            {section?.contents.map((content, index) => (
-                                                <p key={`content-${index}`}>{content}</p>
-                                            ))}
+                                            {section?.contents.map((content, index) => {
+                                                let checkIndex = index === 0;
+                                                return (
+                                                    <p
+                                                        key={`content-${index}`}
+                                                        className={checkIndex ? "text-gray-500" : ""}
+                                                    >
+                                                        {content}
+                                                    </p>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 );

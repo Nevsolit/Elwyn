@@ -46,11 +46,10 @@
 
             &__items{
                 @apply flex flex-col gap-8;
-                @apply lg:flex-row;
+                
 
                 img{
                     @apply rounded-2xl shadow-default;
-                    @apply lg:w-[50%];
                 }
     
                 &__content{
