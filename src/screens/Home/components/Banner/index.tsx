@@ -60,12 +60,14 @@ const Banner: React.FC = memo(() => {
                         <h1 className="max-w-[350px] text-gray-400">
                             Tạo ra trải nghiệm người dùng sạch sẽ, thú vị Giúp mọi người tăng giá trị của họ ✏️{" "}
                         </h1>
-                        <Link
-                            to={banners[0]?.link || "https://www.facebook.com/groups/862643358866875"}
-                            target="_blank"
-                        >
-                            <span className="text-black font-medium underline hover:text-gray-500">Learn more</span>
-                        </Link>
+                        <div className="flex items-center gap-4">
+                            <Link to={"https://www.behance.net/nevwyn"} target="_blank">
+                                <span className="text-black font-medium underline hover:text-gray-500">Behance</span>
+                            </Link>
+                            <Link to={"https://dribbble.com/Nevwyn"} target="_blank">
+                                <span className="text-black font-medium underline hover:text-gray-500">Dribbble</span>
+                            </Link>
+                        </div>
                     </div>
                     <div className="banner__container__image ">
                         <img src={banners[0]?.imageUrl} alt="" className="banner__container__image__main" />
