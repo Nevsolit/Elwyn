@@ -3,6 +3,7 @@ import { memo } from "react";
 import { Link } from "react-router-dom";
 import { ResourcesPost } from "~/core/types";
 import "./styles.scss";
+import Images from "~/assets/imgs";
 
 type ItemServicesProps = {
     data?: ResourcesPost;
@@ -29,10 +30,7 @@ const ItemServices: React.FC<ItemServicesProps> = (props) => {
             <div className={`${layout}__content`}>
                 <h1>{props?.data?.title}</h1>
                 <div className={`${layout}__content__account`}>
-                    <img
-                        src="https://i.pinimg.com/736x/e7/79/3a/e7793a171299c3fe23e6bc7f87431480.jpg"
-                        alt="Võ Ngọc Min Kiên"
-                    />
+                    <img src={Images.account} alt="Võ Ngọc Min Kiên" />
                     <p>Ngoc Min (Nevwyn)</p>
                 </div>
                 <Link
