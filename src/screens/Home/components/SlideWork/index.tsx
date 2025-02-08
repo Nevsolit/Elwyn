@@ -9,8 +9,8 @@ const SlideWork: React.FC = () => {
         <div className="slide__work__container">
             <img src={blogs[0]?.sections[0]?.images[0]?.url} alt={blogs[0]?.title} />
             <div className="slide__work__container__content">
-                <h1>{blogs[0]?.title || ""}</h1>
-                <p>{blogs[0]?.sections[0]?.contents || ""}</p>
+                <h1 className="font-lora">{blogs[0]?.title || ""}</h1>
+                {/* <p>{blogs[0]?.sections[0]?.contents || ""}</p> */}
                 {/* <Link to={`/blog/${blogs[0]?.id}`} className="button__default mt-2">
                     Tìm hiểu thêm
                     <ArrowRight size={16} />
