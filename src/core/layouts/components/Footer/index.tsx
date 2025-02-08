@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                 <NewsletterForm email={email} setEmail={setEmail} t={t} onSubmit={handleSubscribe} loading={loading} />
             </div>
             <div className="footer__container__wrapper__second">
-                <p className="text-sm">© 2024 Elwyn Studio | Built with Min</p>
+                <p className="text-sm">© 2025 Elwyn Studio | Built with Nevwyn</p>
             </div>
         </footer>
     );
@@ -62,7 +62,7 @@ const ContactInfo: React.FC<{ t: (key: string) => string }> = ({ t }) => (
     <div className="wrapper__info group__column">
         <h1>{t("footer.get-in-touch")}</h1>
         <p>{t("footer.description")}</p>
-        <a href="mailto:minull1810@gmail.com">minull1810@gmail.com</a>
+        <a href="mailto:elwynstuido24@gmail.com">elwynstuido24@gmail.com</a>
         <SocialLinks />
     </div>
 );

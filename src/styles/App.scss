@@ -96,6 +96,20 @@ input[type="text"]{
   }
 }
 
+.introduce_title{
+  @apply text-2xl font-bold text-center;
+  @apply 2xl:text-3xl lg:max-w-[560px];
+}
+
+.title_tag{
+  @apply py-1 px-4 rounded-full bg-gray-200 border border-gray-300;
+}
+
+.button__default{
+  @apply bg-[#222227] justify-center duration-150 text-white text-sm px-4 flex items-center gap-2 border border-[#222227] rounded-lg font-medium h-[40px] py-2;
+  @apply hover:bg-white hover:gap-4 hover:text-[#222227]  ;
+}
+
 
 // animations to left
 

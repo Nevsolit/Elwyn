@@ -122,6 +122,7 @@ export async function getItemsByTags(collectionName: string, tag: string, limitC
     }
 }
 
+
 export async function addDocument(collectionName: string, data: any) {
     try {
         const collectionRef = collection(db, collectionName);
@@ -130,6 +131,30 @@ export async function addDocument(collectionName: string, data: any) {
         return docRef.id;
     } catch (error) {
         console.error(`Error adding document to ${collectionName}:`, error);
+        throw error;
+    }
+}
+
+export async function getItemsByCategory(
+    collectionName: string, 
+    category: string, 
+    limitCount?: number
+) {
+    try {
+        const collectionRef = collection(db, collectionName);
+        const q = query(
+            collectionRef,
+            where("category", "==", category),
+            ...(limitCount ? [limit(limitCount)] : [])
+        );
+        
+        const querySnapshot = await getDocs(q);
+        return querySnapshot.docs.map(doc => ({ 
+            id: doc.id, 
+            ...doc.data() 
+        }));
+    } catch (error) {
+        console.error(`Error getting items by category from ${collectionName}:`, error);
         throw error;
     }
 }

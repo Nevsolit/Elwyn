@@ -1,22 +1,22 @@
 import { memo } from "react";
-import { ItemProject, PaginationCustom, SkeletonItem } from "~/core/components";
+import { ItemProject, SkeletonItem } from "~/core/components";
 import EmptyData from "~/core/components/shared/EmptyData";
 import { ProjectsEntity } from "~/core/types/Entity/Projects";
 import fakeData from "~/core/utils/fakeData";
 import "./styles.scss";
+import { useTranslation } from "react-i18next";
 
 interface ListBlogsProps {
     list: ProjectsEntity[];
     loading: boolean;
-    totalPages: number;
-    currentPage: number;
-    onPageChange: (page: number) => void;
 }
 
-const ListProjects: React.FC<ListBlogsProps> = memo(({ list, loading, totalPages, currentPage, onPageChange }) => {
+const ListProjects: React.FC<ListBlogsProps> = memo(({ list, loading }) => {
+    const { t } = useTranslation("global");
+
     return (
         <div className="list__projects__container">
-            <h1 className="list__projects__container__title">Dự án của tôi</h1>
+            <h1 className="list__projects__container__title">{t("project.post.title")}</h1>
             <div className="list__projects__container__wrapper">
                 {loading ? (
                     fakeData(9).map((_, index) => <SkeletonItem key={`skeleton-item-project-${index}`} />)
@@ -24,9 +24,6 @@ const ListProjects: React.FC<ListBlogsProps> = memo(({ list, loading, totalPages
                     list.map((project) => <ItemProject key={project.id} data={project} />)
                 ) : (
                     <EmptyData />
-                )}
-                {!loading && totalPages > 1 && (
-                    <PaginationCustom currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange} />
                 )}
             </div>
         </div>

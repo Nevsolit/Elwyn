@@ -3,21 +3,25 @@ import { Flex } from "@radix-ui/themes";
 import { transitionPage } from "~/core/hoc";
 
 import Banner from "./components/Banner";
-import Introduce from "./components/Introduce";
 import LearnAbout from "./components/LearnAbout";
-import Achievements from "./components/Achievements";
+import MyService from "./components/MyService";
+import ProjectPopular from "./components/ProjectPopular";
 import SlideWork from "./components/SlideWork";
-import Goals from "./components/Goals";
 
 const HomeScreen: React.FC = () => {
     return (
         <Flex direction="column" gap="8">
             <Banner />
-            <Introduce />
-            <Achievements />
-            <LearnAbout />
-            <SlideWork />
-            <Goals />
+            <div className="flex flex-col gap-24 items-center">
+                <SlideWork />
+                <MyService />
+                <LearnAbout />
+                <ProjectPopular />
+                <div className="flex flex-col items-center text-gray-600 text-center">
+                    Cảm ơn bạn đã ghé thăm! <br />
+                    Tôi hy vọng bạn tìm thấy điều gì đó hữu ích ở đây.
+                </div>
+            </div>
         </Flex>
     );
 };

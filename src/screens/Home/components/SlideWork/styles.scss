@@ -1,8 +1,19 @@
 .slide__work__container{
-    @apply bg-gray-100 rounded-2xl overflow-hidden w-full h-[250px];
-    @apply md:h-[300px] lg:h-[350px];
+    @apply w-full relative;
 
     img{
-        @apply w-full h-full object-cover;
+        @apply w-full h-96 object-cover;
+    }
+
+    &__content{
+        @apply absolute top-0 gap-2 px-4 left-0 w-full h-full flex flex-col justify-center items-center text-white bg-[#000000b4];
+    
+        h1{
+            @apply text-2xl text-center font-bold;
+        }
+
+        p{
+            @apply text-center text-sm max-w-[440px];
+        }
     }
 }

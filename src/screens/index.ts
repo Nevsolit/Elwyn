@@ -8,4 +8,6 @@ export {default as InformationCollectionNotice} from './InformationCollectionNot
 export {default as PrivacyPolicy} from './PrivacyPolicy'
 export {default as ContactMe} from './ContactMe'
 export {default as ProjectDetailScreen} from './Project/ProjectDetail'
+export {default as ServicesScreen} from './Services'
+export {default as DetailServiceScreen} from './Services/DetailService'
 

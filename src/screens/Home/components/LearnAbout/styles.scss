@@ -1,4 +1,27 @@
-.learn__about__group_item{
-    @apply gap-4 flex;
-    @apply md:flex-col;
+.learn_about__container{
+    @apply flex flex-col items-center justify-center gap-8 max-w-[820px];
+    @apply md:gap-16;
+
+    &__title {
+        @apply flex flex-col gap-4 items-center;
+    }
+
+    &__content {
+        @apply flex flex-col gap-4;
+        @apply md:flex-row md:gap-8;
+
+       &__image {
+            @apply flex-1 bg-gray-200;
+
+            img{
+                @apply rounded-xl h-60 w-full object-cover;
+                @apply md:flex-1 sm:h-72 md:h-[500px];  
+            }
+       }
+
+        p{
+            @apply text-justify;
+            @apply md:flex-1;   
+        }
+    }
 }

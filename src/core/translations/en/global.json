@@ -1,5 +1,5 @@
 {
-    "header":{
+    "header": {
         "home": "Home",
         "about-us": "About us",
         "projects": "Projects",
@@ -19,46 +19,50 @@
         "privacy-policy": "Privacy Policy",
         "and": "and",
         "information-collection-notice": "our Information Collection Notice"
-        },
+    },
     "home": {
-        "title-introduce" : {
-            "first" : "Hi,",
-            "second" : " I’m Min! ",
-            "third" : "I’m a web developer, designer, content creator and maker of interesting things."
+        "title-introduce": {
+            "first": "Hi,",
+            "second": " I’m Min! ",
+            "third": "I’m a web developer, designer, content creator and maker of interesting things.",
+            "title": "Available courses and services"
         },
-        "title-learn-about" : {
-            "first" : "Know a little about",
-            "second" : "Elwyn!"
+        "title-learn-about": {
+            "first": "Know a little about",
+            "second": "Elwyn!"
         },
-        "title-achivements" : {
-            "first" : "Some",
-            "second" : "of the latest",
-            "third" : "blog posts"
+        "title-achivements": {
+            "first": "Some",
+            "second": "of the latest",
+            "third": "blog posts"
         },
         "slide-work": {
-            "first": "My", 
+            "first": "My",
             "second": "Favourite books!"
         },
         "title-goals": {
-            "first" : "A little bit about",
-            "second" : "passion",
-            "third" : "and",
-            "fourth" : "goals!"
+            "first": "A little bit about",
+            "second": "passion",
+            "third": "and",
+            "fourth": "goals!"
+        },
+        "my-projects": {
+            "title": "We turn complex ideas into visual products"
         }
     },
     "about-us": {
-       "about-me":{
+        "about-me": {
             "title": "Hello, my name is Min - I am a web developer and web designer in Vietnam.",
             "description-1": "I want to create work with heart, purpose and originality. Some of my favorite projects include creating art, my painting for freedom program, and you may have come across some of my products on the market. I once participated in creating the Japanese comic book Flower That Day! , Memories of a time, ... At the same time, I have also participated in the development of a few Web3 projects such as Sightsea.",
             "description-2": "Previously, I was a freelance illustrator, but now I have stopped it and become a developer. It doesn't mean I'm giving up on it, but I will keep it because it is my passion."
-       },
-       "skills": {
+        },
+        "skills": {
             "title": "Selected Clients"
-       },
-       "my-teams": {
+        },
+        "my-teams": {
             "title": "My Teams",
             "description": "A brief introduction to some of our studio members."
-       }
+        }
     },
     "projects": {
         "title": "Projects",
@@ -84,7 +88,7 @@
         "title": "Contact",
         "description": "If you have any questions or need help, please contact us. We are always ready to help you."
     },
-    "empty_data":{
+    "empty_data": {
         "title": "No data",
         "description": "There is no data available"
     },
@@ -92,7 +96,7 @@
         "title": "Terms of Use",
         "introduction": "1. Introduction",
         "des-introduction": "Welcome to Elwyn Studio. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. If you do not agree with these terms, please do not use our site.",
-        "services" : "2. Services",
+        "services": "2. Services",
         "des-services": "Elwyn Studio provides design and development services, including but not limited to portfolio and landing page design. The specifics of the services offered will be detailed in the service agreement.",
         "user-responsibilities": "3. User Responsibilities",
         "des-user-responsibilities": "You agree to use our website and services in compliance with all applicable laws and regulations. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
@@ -143,8 +147,8 @@
         "success-subscribe": "You have successfully subscribed to our newsletter!"
     },
     "filter": {
-        "newest" : "Newest",
-        "oldest" : "Oldest"
+        "newest": "Newest",
+        "oldest": "Oldest"
     },
     "share-life": {
         "title": "Share Life",
@@ -152,5 +156,39 @@
         "search": "Search",
         "placeholder-search": "Search",
         "view-detail": "View detail"
+    },
+    "project": {
+        "title": {
+            "first": "Impression in words",
+            "second": "the look."
+        },
+        "description": "A strategic thinker who creates clean, efficient designs that seamlessly blend user satisfaction with business success.",
+        "my-principles": "My Design Principles",
+        "list": {
+            "first": {
+                "title": "Kaizen",
+                "description": "The word 'Kaizen' means continuous improvement. Never settle for mediocrity—There is always room to make our designs better, one iteration at a time."
+            },
+            "second": {
+                "title": "People, not users",
+                "description": "Good design balances aesthetics and functionality while empathizing with users' emotions, behaviors, and tasks to be accomplished."
+            },
+            "third": {
+                "title": "Details, details, details",
+                "description": "A product's design details reflect its brand. From spacing, typography, element sizes to microcopy, every element must be meticulously crafted."
+            },
+            "fourth": {
+                "title": "Surprise!",
+                "description": "Subtle interactions, playful animations, and creative copy—small design elements like these create magical user experiences."
+            }
+        },
+        "post": {
+            "title": "My Project",
+            "view-detail": "View detail"
+        }
+    },
+    "services": {
+        "title": "Services",
+        "description": "We provide a variety of services to help you achieve your goals. From design to development, we have you covered."
     }
 }

@@ -1,0 +1,9 @@
+.project_popular__container{
+    @apply w-full p-2 flex flex-col items-center ;
+    @apply md:py-16;
+
+    &__list {
+        @apply grid grid-cols-1 gap-4;
+        @apply md:grid-cols-3 md:gap-8;
+    }
+}

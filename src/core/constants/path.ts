@@ -13,6 +13,9 @@ const PATHS = {
 
     CONTACT_ME: 'contact-me',
 
+    SERVICES: 'services',
+    SERVOCES_DETAIL: 'services/:serviceId',
+
     TERMS_OF_USE: 'terms-of-use',
     PRIVACY_POLICY: 'privacy-policy',
     INFORMATION_COLLECTION_NOTICE: 'information-collection-notice',

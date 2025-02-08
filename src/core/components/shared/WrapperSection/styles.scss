@@ -4,6 +4,7 @@
 
     &__wrapper{
         @apply m-auto gap-8 items-center container ;
+        @apply xl:gap-12;
     }
 
     .detail__section{

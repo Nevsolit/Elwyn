@@ -1,0 +1,21 @@
+.item_project__container{
+    @apply bg-white/30 items-start duration-150 justify-start shadow-md flex flex-col gap-4 backdrop-blur-md p-4 rounded-3xl border-gray-200 border;
+    @apply md:max-w-[360px];
+    @apply hover:shadow-lg hover:-translate-y-2; 
+
+    span {
+        @apply text-xs py-1 px-2 rounded-full bg-gray-200 text-gray-500;
+    }
+
+    h3{
+        @apply text-lg font-semibold line-clamp-2;
+    }
+
+    &__link{
+        @apply underline text-sm;
+    }
+
+    img{
+        @apply w-full h-60 object-cover rounded-xl;
+    }
+}

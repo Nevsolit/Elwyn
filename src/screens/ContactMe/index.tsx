@@ -65,21 +65,21 @@ const ContactMe: React.FC = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
-                            placeholder="Your name"
+                            placeholder=" Tên của bạn"
                         />
                         <InputField
                             label="Công ty của tôi là"
                             name="company"
                             value={formData.company}
                             onChange={handleInputChange}
-                            placeholder="Company"
+                            placeholder="Tên công ty"
                         />
                         <InputField
                             label="Email của tôi là"
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            placeholder="Your email"
+                            placeholder="Email của bạn"
                             type="email"
                         />
                         <div className="group-form">
@@ -91,11 +91,11 @@ const ContactMe: React.FC = () => {
                                 name="details"
                                 value={formData.details}
                                 onChange={handleInputChange}
-                                placeholder="Your message"
+                                placeholder="Nhập thông tin chi tiết"
                             />
                         </div>
-                        <button type="submit" disabled={isSubmitting}>
-                            {isSubmitting ? "Submitting..." : "Submit"}
+                        <button type="submit" disabled={isSubmitting} className="button__default">
+                            {isSubmitting ? "Submitting..." : "Gửi thông điệp"}
                         </button>
                     </form>
                     {submitMessage && <p className="submit-message ">{submitMessage}</p>}

@@ -1,0 +1,11 @@
+.account__container{
+    @apply flex items-center gap-2;
+
+    img{
+        @apply h-10 w-10 rounded-full object-cover;
+    }
+
+    p{
+        @apply font-semibold;
+    }
+}

@@ -44,7 +44,7 @@ const PrivacyPolicy: React.FC = () => {
         <div className="privacy_policy__container">
             <WrapperSection>
                 <div className="privacy_policy__container__wrapper">
-                    <h1 className="title__v2">{t("privacy-policy.title")}</h1>
+                    <h1 className="title__v2 ">{t("privacy-policy.title")}</h1>
                     <hr />
                     {privacyPolicy.map((items, index) => (
                         <div key={index} className="box__content__v2">

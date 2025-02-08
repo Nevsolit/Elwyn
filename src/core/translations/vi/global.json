@@ -24,7 +24,8 @@
         "title-introduce": {
             "first": "Tìm hiểu",
             "second": "một chút",
-            "third": "về tôi. Mục đích,tư duy, lối sống và khả năng phát triển trong công việc!"
+            "third": "về tôi. Mục đích,tư duy, lối sống và khả năng phát triển trong công việc!",
+            "title": "Các khoá học và dịch vụ hiện có"
         },
         "title-learn-about": {
             "first": "Hành trình thay đổi, phát triển & Những thành tựu",
@@ -44,6 +45,9 @@
             "second": "đam mê",
             "third": "và",
             "fourth": "mục tiêu của tôi đã đặt ra!"
+        },
+        "my-projects": {
+            "title": "Chúng tôi biến ý tưởng phức tạp thành sản phẩm trực quan"
         }
     },
     "about-us": {
@@ -103,7 +107,7 @@
         "changes-to-terms": "6. Thay Đổi Điều Khoản",
         "des-changes-to-terms": "Chúng tôi có thể cập nhật các Điều Khoản Sử Dụng này từ thời gian này đến thời gian khác. Việc bạn tiếp tục sử dụng trang web đồng nghĩa với việc chấp nhận bất kỳ thay đổi nào.",
         "governing-law": "7. Luật Áp Dụng",
-        "des-governing-law": "Các Điều Khoản Sử Dụng này được điều chỉnh bởi luật của [Quốc Gia/Tỉnh]. Mọi tranh chấp phát sinh dưới các điều khoản này sẽ thuộc thẩm quyền của các tòa án tại Việt Nam."
+        "des-governing-law": "Các Điều Khoản Sử Dụng này được điều chỉnh bởi luật của Việt Nam. Mọi tranh chấp phát sinh dưới các điều khoản này sẽ thuộc thẩm quyền của các tòa án tại Việt Nam."
     },
     "privacy-policy": {
         "title": "Chính Sách Quyền Riêng Tư",
@@ -152,5 +156,39 @@
         "search": "Tìm kiếm",
         "placeholder-search": "Tìm kiếm bài viết",
         "view-detail": "Xem chi tiết"
+    },
+    "project": {
+        "title": {
+            "first": "Ấn tượng trong từ",
+            "second": "cái nhìn."
+        },
+        "description": "Nhà tư duy chiến lược tạo ra những thiết kế sạch sẽ, hiệu quả, kết hợp nhuần nhuyễn sự hài lòng của người dùng với thành công trong kinh doanh.",
+        "my-principles": "Nguyên tắc thiết kế của tôi",
+        "list": {
+            "first": {
+                "title": "Kaizen",
+                "description": "Từ 'Kaizen' có nghĩa là cải tiến liên tục. Đừng bao giờ chấp nhận sự tầm thường—Luôn có chỗ để làm cho thiết kế của chúng ta tốt hơn, mỗi lần lặp lại một lần."
+            },
+            "second": {
+                "title": "Con người, không phải người dùng",
+                "description": " Thiết kế tốt cân bằng giữa tính thẩm mỹ và chức năng trong khi vẫn thể hiện sự đồng cảm với cảm xúc, hành vi và công việc cần hoàn thành của người dùng."
+            },
+            "third": {
+                "title": "Chi tiết, chi tiết và chi tiết",
+                "description": "Chi tiết thiết kế của sản phẩm phản ánh thương hiệu của sản phẩm. Từ khoảng cách, kiểu chữ, kích thước thành phần đến bản sao siêu nhỏ, mỗi yếu tố đều phải được chế tác tỉ mỉ."
+            },
+            "fourth": {
+                "title": "Thật bất ngờ!",
+                "description": "Tương tác tinh tế, hoạt ảnh vui nhộn và bản sao sáng tạo—Những yếu tố thiết kế nhỏ như thế này tạo ra trải nghiệm người dùng kỳ diệu."
+            }
+        },
+        "post": {
+            "title": "Dự án của tôi",
+            "view-detail": "Xem chi tiết"
+        }
+    },
+    "services" : {
+        "title": "Dịch vụ",
+        "description": "Dưới đây là một số dịch vụ mà tôi cung cấp."
     }
 }
