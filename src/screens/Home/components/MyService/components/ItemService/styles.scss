@@ -12,7 +12,7 @@
     }
 
     &__content{
-        @apply absolute top-0 gap-3 left-0 w-full h-full p-4 flex flex-col justify-end items-start;
+        @apply absolute top-0 left-0 w-full h-full p-4 flex flex-col justify-end items-start;
     
         span{
             @apply text-xs py-1 font-medium text-white px-2 rounded-full bg-[#000000b2];
