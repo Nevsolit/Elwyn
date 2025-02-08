@@ -29,9 +29,9 @@ const Banner: React.FC = memo(() => {
             <WrapperSection>
                 <div className="banner__container__wrapper">
                     <div className="banner__container__title">
-                        <p className="uppercase text-xs">Chào mừng đến với Elwyn Studio</p>
+                        <p className="uppercase text-xs">Chào mừng đến với</p>
                         <h1 className="text-xl lg:font-semibold lg:max-w-[480px] lg:leading-[2.8rem] lg:text-4xl text-[#353535]">
-                            Biến ý tưởng thành thực tế số <br /> & Thiết kế đẳng cấp, trải nghiệm hoàn hảo! 💡{" "}
+                            Elwyn Studio <br /> & Thiết kế trải nghiệm, kiến tạo cảm xúc! 💡{" "}
                         </h1>
                         <h1 className="max-w-[350px] text-gray-400 ">
                             Tạo ra trải nghiệm người dùng sạch sẽ, thú vị Giúp mọi người tăng giá trị của họ ✏️{" "}
