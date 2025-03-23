@@ -11,7 +11,7 @@ type LogoProps = {
 const Logo: React.FC<LogoProps> = memo(({ url }) => {
     return (
         <Link to={PATHS.HOME}>
-            <img src={url} alt="Elwyn studio" className="logo__container" />
+            <img src={url} alt="Elwaire studio" className="logo__container" />
         </Link>
     );
 });

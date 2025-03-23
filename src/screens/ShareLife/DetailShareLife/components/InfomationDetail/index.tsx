@@ -28,7 +28,7 @@ const InfomationDetail: React.FC = () => {
             <div className="infomation-detail-container__account">
                 <img
                     src={informationDetail?.avatar}
-                    alt="elwyn"
+                    alt="elwaire"
                     className="infomation-detail-container__account__avatar"
                 />
                 <div className="infomation-detail-container__account__info">

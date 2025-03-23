@@ -62,7 +62,7 @@ const BlogDeatil: React.FC = () => {
                                             key={`item-section-image-blog-${index}`}
                                             className={!checkImage ? "" : "blog_detail__container__image"}
                                             src={image.url}
-                                            alt="elwyn"
+                                            alt="elwaire"
                                         />
                                     ))}
                                 </div>

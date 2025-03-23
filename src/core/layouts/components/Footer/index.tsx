@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                 <NewsletterForm email={email} setEmail={setEmail} t={t} onSubmit={handleSubscribe} loading={loading} />
             </div>
             <div className="footer__container__wrapper__second">
-                <p className="text-sm">© 2025 Elwyn Studio | Built with Nevwyn</p>
+                <p className="text-sm">© 2025 Elwaire Studio | Built with Nevwyn</p>
             </div>
         </footer>
     );
@@ -62,7 +62,12 @@ const ContactInfo: React.FC<{ t: (key: string) => string }> = ({ t }) => (
     <div className="wrapper__info group__column">
         <h1>{t("footer.get-in-touch")}</h1>
         <p>{t("footer.description")}</p>
-        <a href="mailto:elwynstuido24@gmail.com">elwynstuido24@gmail.com</a>
+        <a
+            href="mailto:elwairestudio@gmail.com
+"
+        >
+            elwairestudio@gmail.com
+        </a>
         <SocialLinks />
     </div>
 );
@@ -89,13 +94,6 @@ interface NewsletterFormProps {
 const NewsletterForm: React.FC<NewsletterFormProps> = ({ t, onSubmit, loading, email, setEmail }) => (
     <div className="wrapper__form group__center">
         <form className="group__column items-center" onSubmit={onSubmit}>
-            {/* <div className="wrapper__form__image">
-                <img src={Images.avatarFooter} alt="Elwyn" />
-            </div> */}
-            {/* <div className="group__column__center">
-                <h1>{t("footer.Elwyn-Studio-Newsletter")}</h1>
-                <p>{t("footer.contact")}</p>
-            </div> */}
             <div className="wrapper__form__input">
                 <input
                     type="email"

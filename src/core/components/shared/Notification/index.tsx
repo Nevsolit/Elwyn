@@ -32,7 +32,10 @@ const Notification: React.FC<NotificationProps> = ({ message, type = "info", dur
             className={`notification__container notification--${type} ${isLeaving ? "slide-out-top" : "slide-in-top"}`}
         >
             <div className="notification__container__image">
-                <img src="https://i.pinimg.com/564x/3f/28/9b/3f289b17e8a399e3cdefaa10027a088d.jpg" alt="elwyns" />
+                <img
+                    src="https://i.pinimg.com/564x/3f/28/9b/3f289b17e8a399e3cdefaa10027a088d.jpg"
+                    alt="elwaire studio"
+                />
             </div>
             <p>{message}</p>
         </div>
